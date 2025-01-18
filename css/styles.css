@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+    margin: 10px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  body {
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/* General Styles */
+body {
+  font-family: 'Dosis', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #357b70;
+  margin: 0;
+  margin-top: 50px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.image__logo {
+  width: 100px;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #357b70;
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  color: #357b70;
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 16px;
+  text-align: center;
+  color: #6e4d05;
+  padding: 10px;
+}
+
+p {
+  font-size: 16px;
+  text-align: center;
+  color: #6e4d05;
+  padding: 10px;
+}
+
+.profile {
+  padding: 80px;
+}
+
+/* Navigation Styles */
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.navigation-list__item {
+  padding: 10px 25px;
+  border-radius: 4px;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 2px;
+  margin: 20px;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+  padding: 10px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+a {
+  color: #357b70;
+  text-decoration: none;
+  font-family: inherit;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+input[type="submit"] {
+  color: #357b70;
+  text-decoration: none;
+  font-family: inherit;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+.navigation-list__item:hover {
+  background-color: #6e4d05;
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.button-link:hover {
+  background-color: #6e4d05;
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Table Styles */
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 60%;
+}
+
+th {
+  color: #357b70;
+  padding: 10px;
+  border: 1px solid #6e4d05;
+  text-align: center;
+}
+
+td {
+  color: #357b70;
+  padding: 10px;
+  border: 1px solid #6e4d05;
+  text-align: center;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+tr {
+  color: #357b70;
+  padding: 10px;
+  border: 1px solid #6e4d05;
+  text-align: center;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+tr:hover td {
+  background-color: #6e4d05;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Grid Styles */
+.grid-container {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+}
+
+.grid-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #6e4d05;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 60px;
+}
+
+footer a img {
+  transition: transform 0.2s ease;
+}
+
+footer a:hover img {
+  transform: scale(1.3);
+  background-color: #ffffff;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* Animation Styles */
+.illustration-container img {
+  animation: float 3s ease-in-out infinite;
+  width: 250px;
+  height: 350px;
+  align-self:auto;
+  border: 3px solid #6e4d05;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+p {
+  animation: transformText 3s infinite;
+}
+
+@keyframes transformText {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
