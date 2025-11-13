@@ -1,8 +1,6 @@
 <!-- README.md -->
 
-# _mypotfolio
-
-readme_content = """# Claudia Araos - Web Developer Portfolio
+# _myportfolio
 
 Welcome to my personal portfolio website! This site showcases my journey as a web developer and highlights my projects and skills.
 
@@ -73,9 +71,9 @@ portfolio/
 
 ### Installation
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/claudias-hub/_myportfolio.git
-
+```bash
+git clone https://github.com/claudias-hub/_myportfolio.git
+```
 
 ### Navigate to the project directory:
 
@@ -93,7 +91,7 @@ live-server
 ⭐ Thank you for visiting my portfolio! ⭐
 
 📧 Contact
-Email: araosclaudia82-gmail.com
+Email: araosclaudia82@gmail.com
 LinkedIn: [Your LinkedIn profile]
 GitHub: claudias-hub
 

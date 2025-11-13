@@ -2,53 +2,105 @@
 
 <!DOCTYPE html>
 <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <title>End to End Design · Claudia Araos</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Handlee&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
-   <link rel="stylesheet" type="text/css" href="css/styles.css">
- </head>
- <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <head>
+    <meta charset="UTF-8">
+    <title>End to End Design · Intro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Front‑end developer focused on accessible, responsive, test‑minded UIs. Projects in React and vanilla JS. End‑to‑end delivery from design to deploy." />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Handlee&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="page-header">      
-       <img src="img/logo_claudia_andrea.svg" class="image__logo page-header__item" alt="Claudia Andrea logo">      
-       <nav class="main-navigation page-header__item">
+      <img src="img/logo_caac.svg" class="image__logo page-header__item" alt="Claudia Andrea logo"> 
+
+      <!-- Mobile menu button -->
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open main menu">
+        <span class="nav-toggle__text">Menu</span>
+      </button>   
+
+      <nav id="main-nav" role="navigation" class="main-navigation page-header__item" hidden>
         <ul role="menubar" class="navigation-list">
-          <li role="menuitem">
-            <a href="index.html" aria-label="Home Page" class="navigation-list__item">Home</a>
-          </li>
-          <li role="menuitem">
-            <a href="about.html" aria-label="About Page" class="navigation-list__item">About</a>
-          </li>
-          <li role="menuitem">
-            <a href="work.html" aria-label="Work Page" class="navigation-list__item">Work</a>
-          </li>
-          <li role="menuitem">
-            <a href="contact.html" aria-label="Contact Page" class="navigation-list__item">Contact</a>
-          </li>
+          <li role="menuitem"><a href="index.html" aria-label="Home Page" class="navigation-list__item">Home</a></li>
+          <li role="menuitem"><a href="about.html" aria-label="About Page" class="navigation-list__item">About</a></li>
+          <li role="menuitem"><a href="work.html" aria-label="Work Page" class="navigation-list__item">Work</a></li>
+          <li role="menuitem"><a href="contact.html" aria-label="Contact Page" class="navigation-list__item">Contact</a></li>
         </ul>
       </nav>
     </header>
-  <main id="main" class="hero">
-    <article class="illustration-container">
-      <img src="img/me_in_a_frame.jpg" alt="Abstract framed illustration">
-      <h1>End to End Design · Claudia Araos</h1>
-      <h2>From idea to deploy — accessible, responsive, test‑minded front‑end.</h2>   
-      <p>I’m Claudia Araos. I design, build, test and ship modern web UIs with HTML, CSS, JavaScript and React. Explore selected work:</p>
-      <h3>View my projects <a href="work.html" class="button-link">Here</a></h3>
-    </article>
-  </main>
-  <footer class="page-footer">
-    <p>Find me on:</p>
-    <div class="social-media">
-     <a href="https://github.com/claudias-hub" target="_blank" rel="noopener" aria-label="GitHub profile">
-      <img src="https://icongr.am/octicons/mark-github.svg?size=128&color=currentColor" alt="GitHub" height="30" width="30">
-     </a>
-    </div>
-  </footer>
+    <main id="main" class="hero">
+      <article class="illustration-container">
+        <img src="img/woman_in_a_frame.jpg" alt="Abstract framed illustration">
+        <h1>End to End Design · Claudia Araos</h1>
+        <h2>From idea to deploy — accessible, responsive, test‑minded front‑end.</h2>   
+        <p>I’m Claudia Araos. I design, build, test and ship modern web UIs with HTML, CSS, JavaScript and React. Explore selected work:</p>
+        <h3>View my projects <a href="work.html" class="button-link">Here</a></h3>
+      </article>
+    </main>
+
+    <footer class="page-footer">
+      <p>Find me on:</p>
+      <div class="social-media">
+      <a href="https://github.com/claudias-hub" target="_blank" rel="noopener" aria-label="GitHub profile">
+        <img src="https://icongr.am/octicons/mark-github.svg?size=128&color=currentColor" alt="GitHub" height="30" width="30">
+      </a>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        const header = document.querySelector('.page-header');
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.getElementById('main-nav');
+
+        if (!toggle || !nav || !header) return;
+
+        function openMenu() {
+          header.classList.add('is-open');
+          nav.hidden = false;
+          toggle.setAttribute('aria-expanded', 'true');
+          toggle.setAttribute('aria-label', 'Close main menu');
+        }
+        function closeMenu() {
+          header.classList.remove('is-open');
+          nav.hidden = true;
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Open main menu');
+        }
+
+        toggle.addEventListener('click', () => {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          expanded ? closeMenu() : openMenu();
+        });
+
+        // Close on Escape
+        window.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeMenu();
+        });
+
+        // Close when clicking a link
+        nav.addEventListener('click', (e) => {
+          if (e.target.tagName === 'A') closeMenu();
+        });
+
+        // Ensure nav is visible on large screens (in case of resize after toggling)
+        const mq = window.matchMedia('(min-width: 769px)');
+        const handleResize = () => {
+          if (mq.matches) {
+            nav.hidden = false;
+            header.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          } else {
+            nav.hidden = true;
+          }
+        };
+        handleResize();
+        mq.addEventListener('change', handleResize);
+      })();
+    </script>
  </body>
 </html>
