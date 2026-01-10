@@ -1,0 +1,257 @@
+<!-- work.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meet App Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Handlee&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="page-header">      
+    <div class="brand-mark">
+      <span class="brand-pill">CAAC</span>
+    </div>   
+       
+    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open main menu">
+      
+      <span class="nav-toggle__text">Menu</span>
+    </button>
+
+    <nav id="main-nav" role="navigation" class="main-navigation page-header__item" hidden>
+      <ul role="menubar" class="navigation-list">
+        <li role="menuitem"><a href="index.html" aria-label="Home Page" class="navigation-list__item">Home</a></li>
+        <li role="menuitem"><a href="about.html" aria-label="About Page" class="navigation-list__item">About</a></li>
+        <li role="menuitem"><a href="work.html" aria-label="Work Page" class="navigation-list__item">Projects</a></li>
+        <li role="menuitem"><a href="meet-app-case-study.html" aria-label="Case Study Page" class="navigation-list__item">Case Study</a></li>
+        <li role="menuitem"><a href="contact.html" aria-label="Contact Page" class="navigation-list__item">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="case-study-wrapper">
+      <!-- Title & Buttons Section -->
+      <section class="case-study-section">
+        <h1>Meet App Case Study</h1>
+        <div class="case-study-buttons">
+          <a href="https://claudias-hub.github.io/meet-app/" target="_blank" rel="noopener" class="button-link">View Live App</a>
+          <a href="https://github.com/claudias-hub/meet-app" target="_blank" rel="noopener" class="button-link button-secondary">View Code</a>
+        </div>
+      </section>
+
+      <!-- Overview & Goals Section -->
+      <section class="case-study-section">
+        <h2>Overview & Goals</h2>
+        <p>Meet App is a serverless progressive web application built to help users discover tech events by city. It works offline, visualizes event data with charts, and uses AWS Lambda for the backend.</p>
+
+        <h3>Problem Statement</h3>
+        <p>Finding relevant tech events across different cities is often fragmented across multiple platforms. Users need a constant internet connection, and there's little visibility into event data patterns.</p>
+
+        <h3>Project Goals</h3>
+        <ul>
+          <li>Filter events by city</li>
+          <li>Show/hide event details</li>
+          <li>Work offline (PWA)</li>
+          <li>Visualize data with charts</li>
+          <li>Use serverless architecture (AWS Lambda)</li>
+          <li>Follow test-driven development (TDD)</li>
+        </ul>
+
+        <h3>Tech Stack</h3>
+        <p>React, Vite, Google Calendar API (OAuth 2.0), AWS Lambda, Jest-Cucumber, Workbox, Recharts, Atatus, GitHub Pages</p>
+
+        <h3>Key Challenges</h3>
+        <ul>
+          <li>Configuring OAuth redirect URIs—small mismatches caused repeated errors.</li>
+          <li>Testing authentication in production (Google OAuth is in "Testing" mode).</li>
+          <li>Making charts responsive on mobile screens.</li>
+          <li>Ensuring offline behavior worked correctly with service workers.</li>
+          <li>Fixing layout issues when event details expanded on smaller screens.</li>
+        </ul>
+
+        <h3>Final Result</h3>
+        <p>A fully functional PWA that allows users to discover events globally, with offline support, data visualization, and a responsive design.</p>
+      </section>
+
+      <!-- Full Case Study Images Section -->
+      <section class="case-study-section">
+        <h2>Full Case Study</h2>
+        <p>Click on the image below to view the complete case study in detail:</p>
+    
+        <div class="grid-container">
+          <div class="grid-item">
+            <!-- Cover image that opens the slideshow -->
+            <img src="img/case-study-page1.jpg" 
+                 alt="Meet App Case Study - Page 1" 
+                 class="project-cover">
+         
+            <!-- Hidden images for the slideshow -->
+            <div class="project-screens" hidden>
+              <img src="img/case-study-page1.jpg" alt="Case Study Page 1" class="project-screenshot">
+              <img src="img/case-study-page2.jpg" alt="Case Study Page 2" class="project-screenshot">
+              <img src="img/case-study-page3.jpg" alt="Case Study Page 3" class="project-screenshot">
+              <img src="img/case-study-page4.jpg" alt="Case Study Page 4" class="project-screenshot">
+              <img src="img/case-study-page5.jpg" alt="Case Study Page 5" class="project-screenshot">
+              <img src="img/case-study-page6.jpg" alt="Case Study Page 6" class="project-screenshot">
+              <img src="img/case-study-page7.jpg" alt="Case Study Page 7" class="project-screenshot">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <p>Find me on:</p>
+    <div class="social-media">
+      <a href="https://github.com/claudias-hub" target="_blank" rel="noopener" aria-label="GitHub profile">
+        <img src="https://icongr.am/octicons/mark-github.svg?size=128&color=currentColor" alt="GitHub" height="30" width="30">
+      </a>
+      <a href="https://www.linkedin.com/in/claudia-araos/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+        <img src="https://icongr.am/entypo/linkedin-with-circle.svg?size=128&color=currentColor" alt="LinkedIn" height="30" width="30">
+      </a>
+    </div>
+    <p>Claudia Araos<br>
+       Based in Berlin, Germany<br>
+       claudia.workhub@gmail.com</p>
+  </footer>
+
+  <!-- Modal used for images and video -->
+  <div id="imgModal" class="img-modal">
+    <button class="close-modal" aria-label="Close view">&times;</button>
+    <button id="prevBtn" class="nav-modal nav-prev" aria-label="Previous">&#10094;</button>
+    <div id="modalContent"></div>
+    <button id="nextBtn" class="nav-modal nav-next" aria-label="Next">&#10095;</button>
+  </div>
+
+  <script>
+    (function () {
+      const header = document.querySelector('.page-header');
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('main-nav');
+      if (!toggle || !nav || !header) return;
+
+      function openMenu() {
+        header.classList.add('is-open');
+        nav.hidden = false;
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close main menu');
+      }
+      function closeMenu() {
+        header.classList.remove('is-open');
+        nav.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open main menu');
+      }
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        expanded ? closeMenu() : openMenu();
+      });
+
+      window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+      nav.addEventListener('click', e => { if (e.target.tagName === 'A') closeMenu(); });
+
+      const mq = window.matchMedia('(min-width: 769px)');
+      const handleResize = () => {
+        if (mq.matches) { nav.hidden = false; header.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); }
+        else { nav.hidden = true; }
+      };
+      handleResize();
+      mq.addEventListener('change', handleResize);
+    })();
+
+    const modal = document.getElementById('imgModal');
+    const modalContent = document.getElementById('modalContent');
+    const closeBtn = modal.querySelector('.close-modal');
+    let currentGroup = [];
+    let currentIndex = 0;
+
+    // open the slideshow for the clicked project
+    document.querySelectorAll('.project-cover').forEach(cover => {
+      cover.addEventListener('click', () => {
+        // find the preview set inside the same project card
+        const project = cover.closest('.grid-item');
+        currentGroup = Array.from(project.querySelectorAll('.project-screenshot, .project-video'));
+        currentIndex = 0;
+        showCurrent();
+        modal.classList.add('show');
+      });
+    });
+
+    // next/prev only within that group
+    document.getElementById('prevBtn').addEventListener('click', e => {
+      e.stopPropagation();
+      if (!currentGroup.length) return;
+      if (currentIndex <= 0) {
+        // we’re at the first slide → close
+        closeModal();
+        return;
+      }
+      currentIndex -= 1;
+      showCurrent();
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', e => {
+      e.stopPropagation();
+      if (!currentGroup.length) return;
+      if (currentIndex >= currentGroup.length - 1) {
+        // we’re at the last slide → close
+        closeModal();
+        return;
+      }
+      currentIndex += 1;
+      showCurrent();
+    });
+    
+
+    function showCurrent() {
+      modalContent.innerHTML = ''; // Remove previous slide
+      const el = currentGroup[currentIndex].cloneNode(true);
+      el.removeAttribute('hidden');
+      el.classList.remove('project-screenshot', 'project-video');
+      el.style.maxHeight = '80vh';
+      el.style.maxWidth = '90vw';
+      modalContent.appendChild(el);
+    } 
+
+    // reusable close function
+    function closeModal() {
+      modal.classList.remove('show');
+      modalContent.innerHTML = '';
+      currentGroup = [];
+    }
+
+    // close by any method
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    window.addEventListener('keydown', e => { 
+      // Only act when modal is open
+      if (!modal.classList.contains('show') || !currentGroup.length) return;
+
+      if (e.key === 'ArrowRight') {
+        if (currentIndex >= currentGroup.length - 1) {
+          closeModal();
+        } else {
+          currentIndex += 1;
+          showCurrent();
+        }
+      } else if (e.key === 'ArrowLeft') {
+        if (currentIndex <= 0) {
+          closeModal();
+        } else {
+          currentIndex -= 1;
+          showCurrent();
+        }
+      } else if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -29,6 +29,7 @@
         <li role="menuitem"><a href="index.html" aria-label="Home Page" class="navigation-list__item">Home</a></li>
         <li role="menuitem"><a href="about.html" aria-label="About Page" class="navigation-list__item">About</a></li>
         <li role="menuitem"><a href="work.html" aria-label="Work Page" class="navigation-list__item">Projects</a></li>
+        <li role="menuitem"><a href="meet-app-case-study.html" aria-label="Case Study Page" class="navigation-list__item">Case Study</a></li>
         <li role="menuitem"><a href="contact.html" aria-label="Contact Page" class="navigation-list__item">Contact</a></li>
       </ul>
     </nav>
@@ -70,6 +71,47 @@
         </div>
 
         <div class="grid-item">
+          <h2>What Do I Cook?</h2>
+          <img src="img/WhatDoICook-1.jpg"
+              alt="What Do I Cook? app showing recipe suggestions"
+              class="project-cover">
+          <!-- hidden screenshots for slideshow -->
+          <div class="project-screens" hidden>
+            <img src="img/WhatDoICook-1.jpg" alt="Search form and recipe cards" class="project-screenshot">
+            <img src="img/WhatDoICook-2.jpg" alt="Recipe details modal" class="project-screenshot">
+            <img src="img/WhatDoICook-3.jpg" alt="Favorites section with saved recipes" class="project-screenshot">
+          </div>
+
+          <h3>
+            <strong>Overview:</strong>
+            A small full‑stack recipe helper that lets users type the ingredients they already have and discover matching recipes. 
+            The app calls a custom Node/Express backend that wraps the Spoonacular API, normalizes the data, and exposes a clean REST interface. 
+            On the front end, users can view recipe details in a modal, save favorites in <code>localStorage</code>, and switch seamlessly between local development and the deployed API.
+          </h3>
+
+          <p>
+            <strong>Tech stack Backend:</strong>
+            Node.js, Express, Spoonacular REST API integration, dotenv for environment variables, CORS configuration, 
+            Render deployment (web service with environment‑based API key).
+          </p>
+
+          <p>
+            <strong>Tech stack Frontend:</strong>
+            HTML5, CSS3 (custom responsive layout using Flexbox and small Bootstrap utility classes), vanilla JavaScript (ES6+), 
+            Fetch API, Bootstrap 5 modals and grid helpers, browser <code>localStorage</code> for favorites, GitHub Pages deployment.
+          </p>
+
+          <p>
+            <a href="https://github.com/claudias-hub/what-do-i-cook" target="_blank" rel="noopener" class="button-link button-secondary">
+              View Code
+            </a>
+            <a href="https://claudias-hub.github.io/what-do-i-cook/" target="_blank" rel="noopener" class="button-link">
+              Live Preview
+            </a>
+          </p>
+        </div>
+
+        <div class="grid-item">
           <h2>Meet App</h2>
           <img src="img/MeetApp-1.jpg"
                alt="MeetApp start screen"
@@ -86,6 +128,7 @@
           <p>
             <a href="https://github.com/claudias-hub/meet-app" target="_blank" rel="noopener" class="button-link button-secondary">View Code</a>
             <a href="https://claudias-hub.github.io/meet-app/" target="_blank" rel="noopener" class="button-link">Live Preview</a>
+            <a href="meet-app-case-study.html" aria-label="Case Study Page" class="button-link button-secondary">Case Study</a>
           </p>
         </div>
 
@@ -158,7 +201,13 @@
       <a href="https://github.com/claudias-hub" target="_blank" rel="noopener" aria-label="GitHub profile">
         <img src="https://icongr.am/octicons/mark-github.svg?size=128&color=currentColor" alt="GitHub" height="30" width="30">
       </a>
+      <a href="https://www.linkedin.com/in/claudia-araos/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+        <img src="https://icongr.am/entypo/linkedin-with-circle.svg?size=128&color=currentColor" alt="LinkedIn" height="30" width="30">
+      </a>
     </div>
+    <p>Claudia Araos<br>
+       Based in Berlin, Germany<br>
+       claudia.workhub@gmail.com</p>
   </footer>
 
   <!-- Modal used for images and video -->

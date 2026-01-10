@@ -131,6 +131,13 @@ main {
   font-size: 1rem;       /* same as global p */
 }
 
+/* Case Study Page - Force Vertical Layout */
+#main section {
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
 .page-content {
   width: 100%;
   max-width: 1024px;
@@ -438,6 +445,8 @@ main {
   border-color: rgba(96,165,250,0.9);
   background: radial-gradient(circle at top, rgba(31,41,55,0.98), rgba(15,23,42,0.98));
 }
+
+
 /* Project cover image */
 .project-cover {
   width: 100%;
@@ -814,4 +823,87 @@ select:focus {
   .nav-toggle {
     display: none !important;
   }
+}
+
+/* ===========================
+   Case Study Page Only
+   =========================== */
+
+/* Wrapper for case study content */
+.case-study-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+/* Force vertical stacking for case study sections */
+.case-study-section {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--space-xl);
+}
+
+/* Override grid behavior ONLY on case study page */
+.case-study-wrapper .grid-container {
+  display: block;
+  grid-template-columns: none;
+}
+
+.case-study-wrapper .grid-item {
+  max-width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* Case study cover image styling */
+.case-study-wrapper .project-cover {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 40px rgba(15,23,42,0.8);
+  margin: 0 auto;
+  display: block;
+}
+
+.case-study-wrapper .project-cover:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 22px 50px rgba(15,23,42,0.9);
+}
+
+/* Text alignment for case study */
+.case-study-section h1,
+.case-study-section h2 {
+  text-align: center;
+}
+
+.case-study-section h3 {
+  text-align: left;
+  margin-top: var(--space-md);
+}
+
+.case-study-section p {
+  text-align: left;
+}
+
+.case-study-section ul {
+  text-align: left;
+  margin-left: var(--space-md);
+  color: var(--text-secondary);
+}
+
+.case-study-section ul li {
+  margin-bottom: var(--space-xs);
+}
+
+/* Button container centering */
+.case-study-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: var(--space-sm);
+  flex-wrap: wrap;
 }
