@@ -1,0 +1,108 @@
+<!-- de/contact.html -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>End to End Design · Kontakt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Handlee&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="page-header">      
+    <div class="brand-mark">
+      <span class="brand-pill">CAAC</span>
+    </div>
+
+    <div class="lang-switcher" aria-label="Sprachauswahl">
+      <a href="../contact.html" aria-label="Englische Version">EN</a>
+      <span class="lang-divider">|</span>
+      <a href="../es/contact.html" aria-label="Versión en español">ES</a>
+      <span class="lang-divider">|</span>
+      <a href="contact.html" class="active" aria-label="Deutsche Version">DE</a>
+    </div>
+    
+    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Hauptmenü öffnen">
+      <span class="nav-toggle__text">Menü</span>
+    </button>
+
+    <nav id="main-nav" role="navigation" class="main-navigation page-header__item" hidden>
+      <ul role="menubar" class="navigation-list">
+        <li role="menuitem"><a href="index.html" aria-label="Startseite" class="navigation-list__item">Start</a></li>
+        <li role="menuitem"><a href="about.html" aria-label="Über mich" class="navigation-list__item">Über mich</a></li>
+        <li role="menuitem"><a href="work.html" aria-label="Projekte" class="navigation-list__item">Projekte</a></li>
+        <li role="menuitem"><a href="meet-app-case-study.html" aria-label="Fallstudie" class="navigation-list__item">Fallstudie</a></li>
+        <li role="menuitem"><a href="contact.html" aria-label="Kontakt" class="navigation-list__item">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article>
+      <h1>Lass uns zusammenarbeiten</h1>
+      <section>
+        <h2>Fülle dieses Formular aus, um Kontakt aufzunehmen:</h2>
+
+        <form action="https://formspree.io/f/xvgdoobg" method="post" id="contact-form">
+          <label class="standar_label" for="contact-email">E‑Mail: </label>
+          <input type="email" id="contact-email" name="email" aria-required="true" required>
+
+          <label class="standar_label" for="contact-tel">Telefon (optional): </label>
+          <input type="tel" id="contact-tel" name="tel" inputmode="tel">
+
+          <label class="standar_label" for="my-input">Nachricht: </label>
+          <textarea id="my-input" name="message" maxlength="240" aria-required="true" required></textarea>
+
+          <input type="submit" value="Nachricht senden" class="button-link">
+        </form>
+
+        <a href="../Araos-Claudia-Resume.pdf" class="button-link button-secondary" download>Lebenslauf herunterladen</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="page-footer">
+    <p>Finde mich auf:</p>
+    <div class="social-media">
+      <a href="https://github.com/claudias-hub" target="_blank"  rel="noopener" aria-label="GitHub-Profil">
+        <img src="https://icongr.am/octicons/mark-github.svg?size=128&color=currentColor" alt="Claudias GitHub" height="30" width="30">
+      </a>
+      <a href="https://www.linkedin.com/in/claudia-araos/" target="_blank" rel="noopener" aria-label="LinkedIn-Profil">
+        <img src="https://icongr.am/entypo/linkedin-with-circle.svg?size=128&color=currentColor" alt="LinkedIn" height="30" width="30">
+      </a>
+    </div>
+    <p>Claudia Araos<br>
+       Berlin, Deutschland<br>
+       claudia.workhub@gmail.com</p>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          form.innerHTML = '<p>Danke für deine Nachricht! Ich melde mich bald zurück.</p>';
+        } else {
+          form.innerHTML = '<p>Ups! Etwas ist schiefgelaufen. Bitte schreib mir eine E‑Mail an <a href="mailto:araosclaudia82@gmail.com">araosclaudia82@gmail.com</a>.</p>';
+        }
+      } catch (error) {
+        form.innerHTML = '<p>Es gab ein Verbindungsproblem. Bitte schreib mir stattdessen eine E‑Mail.</p>';
+      }
+    });
+  </script>
+</body>
+</html>

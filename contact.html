@@ -19,6 +19,15 @@
       <span class="brand-pill">CAAC</span>
     </div>   
     
+    <!-- Translation toggle: Outside the nav -->
+    <div class="lang-switcher">
+      <a href="index.html" class="active">EN</a>
+      <span class="lang-divider">|</span>
+      <a href="es/index.html">ES</a>
+      <span class="lang-divider">|</span>
+      <a href="de/index.html">DE</a>
+    </div>
+
     <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open main menu">
       
       <span class="nav-toggle__text">Menu</span>
@@ -72,41 +81,8 @@
        claudia.workhub@gmail.com</p>
   </footer>
 
-  <script>
-    (function () {
-      const header = document.querySelector('.page-header');
-      const toggle = document.querySelector('.nav-toggle');
-      const nav = document.getElementById('main-nav');
-      if (!toggle || !nav || !header) return;
+  <script src="js/nav.js" defer></script>
 
-      function openMenu() {
-        header.classList.add('is-open');
-        nav.hidden = false;
-        toggle.setAttribute('aria-expanded', 'true');
-        toggle.setAttribute('aria-label', 'Close main menu');
-      }
-      function closeMenu() {
-        header.classList.remove('is-open');
-        nav.hidden = true;
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open main menu');
-      }
-      toggle.addEventListener('click', () => {
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        expanded ? closeMenu() : openMenu();
-      });
-      window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
-      nav.addEventListener('click', (e) => { if (e.target.tagName === 'A') closeMenu(); });
-
-      const mq = window.matchMedia('(min-width: 769px)');
-      const handleResize = () => {
-        if (mq.matches) { nav.hidden = false; header.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); }
-        else { nav.hidden = true; }
-      };
-      handleResize();
-      mq.addEventListener('change', handleResize);
-    })();
-  </script>
   <script>
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', async (e) => {

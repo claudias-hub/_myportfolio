@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Diseño de principio a fin · Contacto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+  <header class="page-header">      
+    <div class="brand-mark"><span class="brand-pill">CAAC</span></div>   
+    <div class="lang-switcher">
+      <a href="../contact.html">EN</a>
+      <span class="lang-divider">|</span>
+      <a href="contact.html" class="active">ES</a>
+      <span class="lang-divider">|</span>
+      <a href="../de/contact.html">DE</a>
+    </div>
+    <button class="nav-toggle">Menú</button>
+    <nav id="main-nav" class="main-navigation" hidden>
+      <ul class="navigation-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre mí</a></li>
+        <li><a href="work.html">Proyectos</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article>
+      <h1>Trabajemos juntos</h1>
+      <section>
+        <h2>Completa este formulario para contactarme:</h2>
+        <form action="https://formspree.io/f/xvgdoobg" method="post" id="contact-form">
+          <label class="standar_label" for="contact-email">Correo electrónico: </label>
+          <input type="email" id="contact-email" name="email" required>
+
+          <label class="standar_label" for="contact-tel">Teléfono (opcional): </label>
+          <input type="tel" id="contact-tel" name="tel">
+
+          <label class="standar_label" for="my-input">Mensaje: </label>
+          <textarea id="my-input" name="message" maxlength="240" required></textarea>
+
+          <input type="submit" value="Enviar mensaje" class="button-link">
+        </form>
+        <a href="../Araos-Claudia-Resume.pdf" class="button-link button-secondary" download>Descargar CV</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="page-footer">
+    <p>Encuentrame en:</p>
+    <div class="social-media">
+      <a href="https://github.com/claudias-hub" target="_blank"  rel="noopener" aria-label="GitHub profile">
+        <img src="https://icongr.am/octicons/mark-github.svg?size=128&color=currentColor" alt="Claudia's GitHub" height="30" width="30">
+      </a>
+      <a href="https://www.linkedin.com/in/claudia-araos/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+        <img src="https://icongr.am/entypo/linkedin-with-circle.svg?size=128&color=currentColor" alt="LinkedIn" height="30" width="30">
+      </a>
+    </div>
+    <p>Claudia Araos<br>
+       Berlín, Alemania<br>
+       claudia.workhub@gmail.com</p>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+    
+  <script>
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          form.innerHTML = '<p>✅ ¡Gracias por tu mensaje! Te responderé pronto.</p>';
+        } else {
+          form.innerHTML = '<p>⚠️ Oops! Algo fue mal. Por favor contactame en <a href="mailto:claudia.workhub@gmail.com">claudia.workhub@gmail.com</a>.</p>';
+        }
+      } catch (error) {
+        form.innerHTML = '<p>⚠️ Error en la conexion.</p>';
+      }
+    });
+  </script>
+</body>
+</html>

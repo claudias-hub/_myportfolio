@@ -1,0 +1,135 @@
+<!-- es/about.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>End to End Design · Sobre mí</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Handlee&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <header class="page-header">      
+      <div class="brand-mark">
+        <span class="brand-pill">CAAC</span>
+      </div>     
+       
+      <!-- Translation toggle: Outside the nav -->
+      <div class="lang-switcher">
+        <a href="../work.html">EN</a>
+        <span class="lang-divider">|</span>
+        <a href="work.html" class="active">ES</a>
+        <span class="lang-divider">|</span>
+        <a href="../de/work.html">DE</a>
+      </div>
+
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menú principal">
+        <span class="nav-toggle__text">Menú</span>
+      </button>
+      
+      <nav id="main-nav" role="navigation" class="main-navigation page-header__item" hidden>
+        <ul role="menubar" class="navigation-list">
+          <li role="menuitem"><a href="index.html" aria-label="Página de inicio" class="navigation-list__item">Inicio</a></li>
+          <li role="menuitem"><a href="about.html" aria-label="Página sobre mí" class="navigation-list__item">Sobre mí</a></li>
+          <li role="menuitem"><a href="work.html" aria-label="Página de proyectos" class="navigation-list__item">Proyectos</a></li>
+          <li role="menuitem"><a href="meet-app-case-study.html" aria-label="Página de caso de estudio" class="navigation-list__item">Caso Completo : Meet App</a></li>
+          <li role="menuitem"><a href="contact.html" aria-label="Página de contacto" class="navigation-list__item">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="illustration-container">
+        <section class="profile">
+          <h1>Soy Claudia, <em>desarrolladora web front‑end</em>, vivo en Berlín y soy originalmente de Venezuela.</h1>
+          <h3>...¡y me encanta la fotografía como hobby!</h3>
+          <p>
+            Trabajo principalmente con HTML, CSS y JavaScript. Algunos de mis proyectos usan React para crear
+            frontends más interactivos, y otros incluyen backends sencillos con Node.js y Express.
+            Mi hobby de la fotografía agudiza mi ojo para la composición y el contraste, y eso se refleja en mis decisiones de UI.
+          </p>
+        </section>
+
+        <section class="profile2">
+          <h2>Habilidades y herramientas</h2>
+          <p>Estas son las principales tecnologías que he usado en los proyectos de este portafolio:</p>
+
+          <div class="skills-grid">
+            <article class="skill-card">
+              <h3>Frontend esencial</h3>
+              <p>HTML5, CSS moderno (Flexbox, Grid), diseños responsive, manejo de formularios.</p>
+            </article>
+
+            <article class="skill-card">
+              <h3>JavaScript y React</h3>
+              <p>JavaScript (ES6+), React para UIs basadas en componentes, React Router básico y manejo de estado.</p>
+            </article>
+
+            <article class="skill-card">
+              <h3>APIs y datos</h3>
+              <p>Consumo de APIs REST, creación de endpoints REST sencillos con Node.js y Express, trabajo con datos JSON.</p>
+            </article>
+
+            <article class="skill-card">
+              <h3>Ejemplos full‑stack</h3>
+              <p>
+                Proyectos que combinan una API personalizada (Node.js/Express, MongoDB) con un cliente frontend
+                separado (React o JavaScript vanilla).
+              </p>
+            </article>
+
+            <article class="skill-card">
+              <h3>UI estilo móvil</h3>
+              <p>Experiencia con una app de chat creada con React Native/Expo, enfocada en interfaces simples y amigables para móvil.</p>
+            </article>
+
+            <article class="skill-card">
+              <h3>Flujo de trabajo y entrega</h3>
+              <p>Git, GitHub, branching, despliegues con GitHub Pages/Vercel, documentación básica en READMEs.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="profile">
+          <h2>Cómo me gusta trabajar</h2>
+          <ul class="bulleted">
+            <li><strong>Empezar con claridad:</strong> definir el objetivo, los usuarios y los flujos principales antes de añadir funcionalidades.</li>
+            <li><strong>Priorizar lo básico:</strong> layout limpio, texto legible, buen contraste y navegación funcional.</li>
+            <li><strong>Construir en pasos pequeños:</strong> entregar algo que funcione y luego mejorar con feedback.</li>
+            <li><strong>Mantenerlo entendible:</strong> preferir nombres claros, estructuras simples y componentes pequeños y enfocados.</li>
+            <li><strong>Que sea mantenible:</strong> usar Git, commits pequeños y despliegues directos.</li>
+          </ul>
+
+          <h3>
+            Puedes ver ejemplos de este enfoque en mis
+            <a href="work.html" class="button-link">proyectos</a>.
+          </h3>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <p>Encuéntrame en:</p>
+      <div class="social-media">
+        <a href="https://github.com/claudias-hub" target="_blank" rel="noopener" aria-label="Perfil de GitHub">
+          <img src="https://icongr.am/octicons/mark-github.svg?size=128&color=currentColor" alt="GitHub" height="30" width="30">
+        </a>
+        <a href="https://www.linkedin.com/in/claudia-araos/" target="_blank" rel="noopener" aria-label="Perfil de LinkedIn">
+          <img src="https://icongr.am/entypo/linkedin-with-circle.svg?size=128&color=currentColor" alt="LinkedIn" height="30" width="30">
+        </a>
+      </div>
+      <p>Claudia Araos<br>
+        Berlín, Alemania<br>
+        claudia.workhub@gmail.com
+      </p>
+    </footer>
+
+    <script src="js/nav.js" defer></script>
+    
+  </body>
+</html>

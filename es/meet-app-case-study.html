@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estudio del Caso: Meet App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Handlee&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+  <header class="page-header">      
+    <div class="brand-mark">
+      <span class="brand-pill">CAAC</span>
+    </div>   
+
+    <!-- Translation toggle: Outside the nav -->
+    <div class="lang-switcher">
+      <a href="../meet-app-case-study.html">EN</a>
+      <span class="lang-divider">|</span>
+      <a href="meet-app-case-study.html" class="active">ES</a>
+      <span class="lang-divider">|</span>
+      <a href="../de/meet-app-case-study.html">DE</a>
+    </div>
+
+    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open main menu">
+      <span class="nav-toggle__text">Menu</span>
+    </button>
+
+    <nav id="main-nav" role="navigation" class="main-navigation page-header__item" hidden>
+      <ul role="menubar" class="navigation-list">
+        <li role="menuitem"><a href="index.html" aria-label="Home Page" class="navigation-list__item">Inicio</a></li>
+        <li role="menuitem"><a href="about.html" aria-label="About Page" class="navigation-list__item">Sobre mi</a></li>
+        <li role="menuitem"><a href="work.html" aria-label="Work Page" class="navigation-list__item">Projectos</a></li>
+        <li role="menuitem"><a href="meet-app-case-study.html" aria-label="Case Study Page" class="navigation-list__item">Caso Completo: Meet App</a></li>
+        <li role="menuitem"><a href="contact.html" aria-label="Contact Page" class="navigation-list__item">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="case-study-wrapper">
+      <section class="case-study-section">
+        <h1>Estudio del Caso: Meet App</h1>
+        <div class="case-study-buttons">
+          <a href="https://claudias-hub.github.io/meet-app/" target="_blank" rel="noopener" class="button-link">Ver App en Vivo</a>
+          <a href="https://github.com/claudias-hub/meet-app" target="_blank" rel="noopener" class="button-link button-secondary">Ver Código</a>
+        </div>
+      </section>
+
+      <section class="case-study-section">
+        <h2>Resumen y Objetivos</h2>
+        <p>Meet App es una aplicación web progresiva serverless diseñada para ayudar a los usuarios a descubrir eventos tecnológicos por ciudad.</p>
+
+        <h3>Definición del Problema</h3>
+        <p>Encontrar eventos tecnológicos relevantes suele estar fragmentado en múltiples plataformas y requiere conexión constante a internet.</p>
+
+        <h3>Objetivos del Proyecto</h3>
+        <ul>
+          <li>Filtrar eventos por ciudad</li>
+          <li>Soporte offline (PWA)</li>
+          <li>Visualización de datos con gráficos</li>
+          <li>Arquitectura serverless (AWS Lambda)</li>
+        </ul>
+
+        <h3>Stack Tecnológico</h3>
+        <p>React, Vite, Google Calendar API, AWS Lambda, Jest-Cucumber, Recharts.</p>
+
+        <h3>Resultado Final</h3>
+        <p>Una PWA funcional que permite descubrir eventos globalmente con soporte offline y diseño responsive.</p>
+      </section>
+
+      <section class="case-study-section">
+        <h2>Estudio del Caso Completo</h2>
+        <p>Haz clic en la imagen para ver el detalle completo:</p>
+
+        <div class="grid-container">
+          <div class="grid-item">
+            <!-- Cover image that opens the slideshow -->
+            <img src="../img/case-study-page1.jpg" alt="Caso de estudio página 1" class="project-cover">
+
+            <!-- Hidden images for the slideshow -->
+            <div class="project-screens" hidden>
+              <img src="../img/case-study-page1.jpg" alt="Case Study Page 1" class="project-screenshot">
+              <img src="../img/case-study-page2.jpg" alt="Case Study Page 2" class="project-screenshot">
+              <img src="../img/case-study-page3.jpg" alt="Case Study Page 3" class="project-screenshot">
+              <img src="../img/case-study-page4.jpg" alt="Case Study Page 4" class="project-screenshot">
+              <img src="../img/case-study-page5.jpg" alt="Case Study Page 5" class="project-screenshot">
+              <img src="../img/case-study-page6.jpg" alt="Case Study Page 6" class="project-screenshot">
+              <img src="../img/case-study-page7.jpg" alt="Case Study Page 7" class="project-screenshot">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <p>Encuéntrame en:</p>
+    <div class="social-media">
+      <a href="https://github.com/claudias-hub" target="_blank" rel="noopener" aria-label="Perfil de GitHub">
+        <img src="https://icongr.am/octicons/mark-github.svg?size=128&color=currentColor" alt="GitHub" height="30" width="30">
+      </a>
+      <a href="https://www.linkedin.com/in/claudia-araos/" target="_blank" rel="noopener" aria-label="Perfil de LinkedIn">
+        <img src="https://icongr.am/entypo/linkedin-with-circle.svg?size=128&color=currentColor" alt="LinkedIn" height="30" width="30">
+      </a>
+    </div>
+    <p>Claudia Araos<br>
+       Berlín, Alemania<br>
+       claudia.workhub@gmail.com
+    </p>
+  </footer>
+  
+  <!-- Modal used for images and video -->
+  <div id="imgModal" class="img-modal">
+    <button class="close-modal" aria-label="Close view">&times;</button>
+    <button id="prevBtn" class="nav-modal nav-prev" aria-label="Previous">&#10094;</button>
+    <div id="modalContent"></div>
+    <button id="nextBtn" class="nav-modal nav-next" aria-label="Next">&#10095;</button>
+  </div>
+
+  <script src="js/nav.js" defer></script>
+  <script src="js/modal-gallery.js" defer></script>
+  
+</body>
+</html>

@@ -160,11 +160,12 @@ main {
 
 .page-header {
   position: sticky;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(20, 40, 79, 0.9);
-  border-bottom: 1px solid rgba(55,65,81,0.8);
+  background: radial-gradient(circle at top, #1f2937 0%, #020617 20%);
+  /* border-bottom: 1px solid rgba(55,65,81,0.8); */
   z-index: 1000;
   padding: 0.7rem 1.5rem;
   display: flex;
@@ -198,7 +199,35 @@ main {
 /* Nav */
 
 .main-navigation {
-  margin-left: auto;
+  display: flex;
+}
+
+#main-nav[hidden] {
+  display: none;
+}
+
+
+.page-header.is-open .main-navigation {
+  position: absolute;
+  top: 100%;
+  right: 1.5rem;              /* aligns under toggle */
+  width: max-content;
+  min-width: 120px;
+  background: rgba(15,23,42,0.98);
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 20px 40px rgba(30,46,84,1);
+}
+
+.page-header.is-open .navigation-list {
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.page-header.is-open .navigation-list a {
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem 1rem;
 }
 
 .navigation-list {
@@ -213,7 +242,7 @@ main {
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 999px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
   background: transparent;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
@@ -227,7 +256,7 @@ main {
 
 /* Mobile nav toggle */
 .nav-toggle {
-  display: none;
+  display: flex;
   background: rgba(15,23,42,0.7);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
@@ -654,10 +683,10 @@ input[type="submit"] {
    =========================== */
 
 .page-footer {
-  background: rgba(20, 40, 79, 0.9);
-  padding: var(--space-md) var(--space-sm);
+  background: radial-gradient(circle at top, #1f2937 0%, #020617 20%);
+  padding: 1px;
   text-align: center;
-  border-top: 1px solid rgba(31,41,55,0.9);
+  /* border-top: 1px solid rgba(31,41,55,0.9); */
 }
 
 .page-footer p {
@@ -665,7 +694,7 @@ input[type="submit"] {
   margin-left: auto;
   margin-right: auto;
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .social-media {
@@ -754,38 +783,6 @@ select:focus {
     padding: calc(var(--header-height) + 1rem) 1rem var(--space-lg);
   }
 
-  .nav-toggle {
-    display: inline-flex;
-  }
-
-  .page-header.is-open .main-navigation {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    width: calc(100% - 2rem);
-    margin: 0 auto;
-    background: rgba(15,23,42,0.98);
-    border-radius: 16px;
-    padding: 0.5rem;
-    box-shadow: 0 20px 40px rgba(15,23,42,1);
-  }
-
-  .page-header.is-open .navigation-list {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .page-header.is-open .navigation-list a {
-    width: 100%;
-    text-align: left;
-    padding: 0.75rem 1rem;
-  }
-
-  #main-nav[hidden] {
-    display: none !important;
-  }
-
   .illustration-container {
     margin: var(--space-md) auto;
     padding: var(--space-md) var(--space-sm);
@@ -816,14 +813,6 @@ select:focus {
   }
 }
 
-@media (min-width: 769px) {
-  #main-nav[hidden] {
-    display: block !important;
-  }
-  .nav-toggle {
-    display: none !important;
-  }
-}
 
 /* ===========================
    Case Study Page Only
@@ -906,4 +895,55 @@ select:focus {
   gap: 1rem;
   margin-top: var(--space-sm);
   flex-wrap: wrap;
+}
+
+/* ===========================
+   Language Switcher
+   =========================== */
+
+.lang-switcher {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  padding: 0.2rem 1rem;
+  border-radius: 20px;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-left: auto; /* Pushes it to the right on desktop */
+  margin-right: 1rem;
+}
+
+.lang-switcher a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.lang-switcher a:hover {
+  color: #f8fafc;
+}
+
+.lang-switcher a.active {
+  color: #60a5fa; /* Your accent blue */
+  background: rgba(96, 165, 250, 0.1);
+}
+
+.lang-divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.7rem;
+}
+
+/* Mobile: stack language switcher below nav items */
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-right: 0.5rem;
+    padding: 0.3rem 0.6rem;
+  }
+  .brand-mark {
+    flex-shrink: 0;
+  }
 }

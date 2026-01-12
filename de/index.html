@@ -1,0 +1,99 @@
+<!-- de/index.html -->
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <title>End to End Design · Intro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend-Entwicklerin mit Fokus auf barrierefreie, responsive und testorientierte UIs. Projekte in React und Vanilla JS. End-to-End-Lieferung vom Design bis zum Deployment." />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Handlee&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <header class="page-header"> 
+      <div class="brand-mark">
+        <span class="brand-pill">CAAC</span>
+      </div>     
+
+      <!-- Language switcher OUTSIDE the nav -->
+      <div class="lang-switcher" aria-label="Sprachauswahl">
+        <a href="../work.html" aria-label="Englische Version">EN</a>
+        <span class="lang-divider">|</span>
+        <a href="../es/work.html" aria-label="Versión en español">ES</a>
+        <span class="lang-divider">|</span>
+        <a href="work.html" class="active" aria-label="Deutsche Version">DE</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Hauptmenü öffnen">
+        <span class="nav-toggle__text">Menu</span>
+      </button>   
+
+      <nav id="main-nav" role="navigation" class="main-navigation page-header__item" hidden>
+        <ul role="menubar" class="navigation-list">
+          <li role="menuitem"><a href="index.html" aria-label="Startseite" class="navigation-list__item">Start</a></li>
+          <li role="menuitem"><a href="about.html" aria-label="Über mich" class="navigation-list__item">Über mich</a></li>
+          <li role="menuitem"><a href="work.html" aria-label="Projekte" class="navigation-list__item">Projekte</a></li>
+          <li role="menuitem"><a href="meet-app-case-study.html" aria-label="Fallstudie" class="navigation-list__item">Fallstudie</a></li>
+          <li role="menuitem"><a href="contact.html" aria-label="Kontakt" class="navigation-list__item">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="hero">
+      <article class="illustration-container">
+        <img src="../img/woman_in_a_frame.jpg" alt="Abstrakte gerahmte Illustration">
+
+        <h1> · End to End Design · </h1>
+        
+        <h3>Eine einfache Idee zu einer funktionierenden Live-Website entwickeln.</h3> 
+
+        <p>
+          Diese Website ist eine kleine Sammlung meiner Arbeit als Frontend-Webentwicklerin. Du kannst
+          durch einige Projekte stöbern, den Code sehen und die Live-Versionen ausprobieren.
+        </p>
+
+        <p>
+          Die Projekte reichen von Single-Page-Apps bis zu Full-Stack-Beispielen mit einer eigenen API. Die meisten
+          nutzen HTML, CSS und JavaScript im Frontend, manchmal mit React. Einige beinhalten auch
+          ein Node.js- und Express-Backend, Routing, Authentifizierung oder Daten von externen APIs.
+        </p>
+
+        <p>
+          Wenn du sehen möchtest, wie ich arbeite, schau dir meine Projektgalerie an oder schick mir eine kurze Nachricht über
+          das, was du brauchst.
+        </p>
+
+        <p class="hero-actions">
+          <a href="work.html" class="button-link">Projekte ansehen</a>
+          <a href="contact.html" class="button-link button-secondary">Kontakt aufnehmen</a>
+          <a href="../Araos-Claudia-Resume.pdf" class="button-link button-secondary" download>Lebenslauf herunterladen</a>
+        </p>
+      </article>
+    </main>
+
+    <footer class="page-footer">
+      <p>Finde mich auf:</p>
+      <div class="social-media">
+        <a href="https://github.com/claudias-hub" target="_blank" rel="noopener" aria-label="GitHub-Profil">
+          <img src="https://icongr.am/octicons/mark-github.svg?size=128&color=currentColor" alt="GitHub" height="30" width="30">
+        </a>
+        <a href="https://www.linkedin.com/in/claudia-araos/" target="_blank" rel="noopener" aria-label="LinkedIn-Profil">
+          <img src="https://icongr.am/entypo/linkedin-with-circle.svg?size=128&color=currentColor" alt="LinkedIn" height="30" width="30">
+        </a>
+      </div>
+      <p>Claudia Araos<br>
+        Berlin, Deutschland<br>
+        claudia.workhub@gmail.com
+      </p>
+    </footer>
+
+    <script src="js/nav.js" defer></script>
+    
+ </body>
+</html>

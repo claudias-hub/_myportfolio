@@ -1,0 +1,239 @@
+<!-- de/work.html -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>End to End Design · Projekte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Handlee&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="page-header">      
+    <div class="brand-mark">
+      <span class="brand-pill">CAAC</span>
+    </div>
+    
+    <!-- Language switcher OUTSIDE the nav -->
+    <div class="lang-switcher" aria-label="Sprachauswahl">
+      <a href="../work.html" aria-label="Englische Version">EN</a>
+      <span class="lang-divider">|</span>
+      <a href="../es/work.html" aria-label="Versión en español">ES</a>
+      <span class="lang-divider">|</span>
+      <a href="work.html" class="active" aria-label="Deutsche Version">DE</a>
+    </div>
+       
+    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Hauptmenü öffnen">
+      <span class="nav-toggle__text">Menü</span>
+    </button>
+
+    <nav id="main-nav" role="navigation" class="main-navigation page-header__item" hidden>
+      <ul role="menubar" class="navigation-list">
+        <li role="menuitem"><a href="index.html" aria-label="Startseite" class="navigation-list__item">Start</a></li>
+        <li role="menuitem"><a href="about.html" aria-label="Über mich" class="navigation-list__item">Über mich</a></li>
+        <li role="menuitem"><a href="work.html" aria-label="Projekte" class="navigation-list__item">Projekte</a></li>
+        <li role="menuitem"><a href="meet-app-case-study.html" aria-label="Fallstudie" class="navigation-list__item">Fallstudie</a></li>
+        <li role="menuitem"><a href="contact.html" aria-label="Kontakt" class="navigation-list__item">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section>
+      <h1>Projekte</h1>
+      <p>
+        Jede Karte unten enthält einen kurzen Überblick, den Tech‑Stack, Screenshots (klicke auf das Bild,
+        um eine Slideshow zu öffnen) sowie Links zum Code und – falls verfügbar – zur Live‑Vorschau.
+      </p>
+
+      <div class="grid-container">
+        <div class="grid-item">
+          <h2>MyFlix App</h2>
+          <img src="../img/myFlixApp-1.jpg"
+               alt="MyFlix App Startbildschirm"
+               class="project-cover">
+          <div class="project-screens" hidden>
+            <img src="../img/myFlixApp-1.jpg" alt="Willkommensbildschirm" class="project-screenshot">
+            <img src="../img/myFlixApp-2.jpg" alt="Registrieren-Modal" class="project-screenshot">
+            <img src="../img/myFlixApp-3.jpg" alt="Login-Modal" class="project-screenshot">
+            <img src="../img/myFlixApp-4.jpg" alt="Profilansicht" class="project-screenshot">
+            <img src="../img/myFlixApp-5.jpg" alt="Filmliste" class="project-screenshot">
+          </div>
+
+          <h3>
+            <strong>Überblick:</strong>
+            Eine Full‑Stack‑Movie‑App, die Schritt für Schritt entwickelt wurde: zuerst eine sichere RESTful Node/Express‑API,
+            danach zwei Frontends (React und Angular), die beide dasselbe Backend nutzen. Die Live‑Vorschau zeigt den Angular‑Client,
+            der mit der deployten API verbunden ist.
+          </h3>
+
+          <p><strong>Tech‑Stack Backend:</strong> Node.js, Express, MongoDB Atlas (Mongoose), JWT‑Authentifizierung, Passport, bcrypt, express‑validator, CORS, Deployment auf Render.</p>
+          <p><strong>Tech‑Stack Frontend (Angular):</strong> Angular, Angular Material, TypeScript, RxJS, responsives Layout, Deployment via GitHub Pages.</p>
+          <p><strong>Tech‑Stack Frontend (React):</strong> React, modernes JavaScript (ES6+), clientseitiges Routing, wiederverwendbare Komponenten, Bootstrap / React‑Bootstrap.</p>
+
+          <p>
+            <a href="https://github.com/claudias-hub/myFlix_api" target="_blank" rel="noopener" class="button-link button-secondary">Code ansehen (Backend‑API)</a>
+            <a href="https://github.com/claudias-hub/myFlix-client" target="_blank" rel="noopener" class="button-link button-secondary">Code ansehen (Frontend React)</a>
+          </p>
+          <p>
+            <a href="https://github.com/claudias-hub/myFlix-Angular-client" target="_blank" rel="noopener" class="button-link button-secondary">Code ansehen (Frontend Angular)</a>
+            <a href="https://claudias-hub.github.io/myFlix-Angular-client/" target="_blank" rel="noopener" class="button-link">Live‑Vorschau</a>
+          </p>
+        </div>
+
+        <div class="grid-item">
+          <h2>What Do I Cook?</h2>
+          <img src="../img/WhatDoICook-1.jpg"
+              alt="What Do I Cook? App mit Rezeptvorschlägen"
+              class="project-cover">
+          <div class="project-screens" hidden>
+            <img src="../img/WhatDoICook-1.jpg" alt="Suchformular und Rezeptkarten" class="project-screenshot">
+            <img src="../img/WhatDoICook-2.jpg" alt="Rezeptdetails‑Modal" class="project-screenshot">
+            <img src="../img/WhatDoICook-3.jpg" alt="Favoritenbereich mit gespeicherten Rezepten" class="project-screenshot">
+          </div>
+
+          <h3>
+            <strong>Überblick:</strong>
+            Ein kleines Full‑Stack‑Rezept‑Tool: Nutzer geben Zutaten ein, die sie bereits zu Hause haben, und finden passende Rezepte.
+            Die App ruft ein eigenes Node/Express‑Backend auf, das die Spoonacular‑API kapselt, Daten vereinheitlicht und eine saubere REST‑Schnittstelle bereitstellt.
+            Im Frontend lassen sich Rezeptdetails in einem Modal anzeigen, Favoriten in <code>localStorage</code> speichern und zwischen lokaler Entwicklung und deployter API wechseln.
+          </h3>
+
+          <p>
+            <strong>Tech‑Stack Backend:</strong>
+            Node.js, Express, Spoonacular REST API Integration, dotenv, CORS‑Konfiguration, Render‑Deployment.
+          </p>
+
+          <p>
+            <strong>Tech‑Stack Frontend:</strong>
+            HTML5, CSS3 (responsives Layout mit Flexbox und kleinen Bootstrap‑Utilities), Vanilla JavaScript (ES6+),
+            Fetch API, Bootstrap 5 Modals, <code>localStorage</code>, GitHub Pages Deployment.
+          </p>
+
+          <p>
+            <a href="https://github.com/claudias-hub/what-do-i-cook" target="_blank" rel="noopener" class="button-link button-secondary">Code ansehen</a>
+            <a href="https://claudias-hub.github.io/what-do-i-cook/" target="_blank" rel="noopener" class="button-link">Live‑Vorschau</a>
+          </p>
+        </div>
+
+        <div class="grid-item">
+          <h2>Meet App</h2>
+          <img src="../img/MeetApp-1.jpg"
+               alt="Meet App Startbildschirm"
+               class="project-cover">
+          <div class="project-screens" hidden>
+            <img src="../img/MeetApp-1.jpg" alt="Meet App Startbildschirm" class="project-screenshot">
+            <img src="../img/MeetApp-2.jpg" alt="Meet App mit Eventdetails" class="project-screenshot">
+            <img src="../img/MeetApp-3.jpg" alt="Meet App Events filtern" class="project-screenshot">
+          </div>
+
+          <h3><strong>Überblick:</strong> Eine serverlose Progressive Web App (PWA) mit React, die sich mit der Google Calendar API verbindet. Nutzer können Events nach Stadt suchen, Details ansehen und Eventdaten in responsiven Charts visualisieren. Die App funktioniert offline über Cache‑Daten und folgt Test‑Driven Development (TDD).</h3>
+          <p><strong>Tech‑Stack:</strong> React, Vite, Google Calendar API (OAuth 2.0), AWS Lambda (serverless Backend), Recharts, Jest & Jest‑Cucumber (TDD/BDD), Workbox, vite‑plugin‑pwa, Atatus, GitHub Deployment.</p>
+          <p><em>Hinweis: Google OAuth ist hier im „Testing“-Modus und auf Testnutzer beschränkt – externe Nutzer könnten beim Login blockiert werden. Repo und Screenshots zeigen das vollständige Verhalten.</em></p>
+
+          <p>
+            <a href="https://github.com/claudias-hub/meet-app" target="_blank" rel="noopener" class="button-link button-secondary">Code ansehen</a>
+            <a href="https://claudias-hub.github.io/meet-app/" target="_blank" rel="noopener" class="button-link">Live‑Vorschau</a>
+            <a href="meet-app-case-study.html" aria-label="Fallstudie" class="button-link button-secondary">Fallstudie</a>
+          </p>
+        </div>
+
+        <div class="grid-item">
+          <h2>Pokedex App</h2>
+          <img src="../img/Pokedex-1.jpg"
+               alt="Pokedex App Startbildschirm"
+               class="project-cover">
+          <div class="project-screens" hidden>
+            <img src="../img/Pokedex-1.jpg" alt="Pokedex App Startbildschirm" class="project-screenshot">
+            <img src="../img/Pokedex-2.jpg" alt="Pokedex App zeigt Details im Modal" class="project-screenshot">
+          </div>
+
+          <h3><strong>Überblick:</strong> Eine kleine Web‑App mit Vanilla JavaScript, die Daten aus der Pokémon‑API lädt und in einer Liste anzeigt. Beim Klick auf ein Pokémon werden Details (Name, Bild, Größe) in einem Bootstrap‑Modal dargestellt. Das war mein erstes JavaScript‑Projekt – Fokus: API‑Integration, DOM‑Manipulation und zugängliche UI‑Patterns.</h3>
+          <p><strong>Tech‑Stack:</strong> HTML5, CSS3, JavaScript (ES5/ES6), Fetch API, PokeAPI (REST API), Bootstrap 4, jQuery, IIFE‑Pattern (Kapselung), Polyfills (IE11‑Support), GitHub Pages Deployment.</p>
+
+          <p>
+            <a href="https://github.com/claudias-hub/Pokedex-js-app" target="_blank" rel="noopener" class="button-link button-secondary">Code ansehen</a>
+            <a href="https://claudias-hub.github.io/Pokedex-js-app/" target="_blank" rel="noopener" class="button-link">Live‑Vorschau</a>
+          </p>
+        </div>
+
+        <div class="grid-item">
+          <h2>Chat App</h2>
+          <img src="../img/ChatApp-1.jpg"
+               alt="Chat App Startbildschirm"
+               class="project-cover">
+          <div class="project-screens" hidden>
+            <img src="../img/ChatApp-1.jpg" alt="Willkommensbildschirm" class="project-screenshot">
+            <img src="../img/ChatApp-2.jpg" alt="Startbildschirm" class="project-screenshot">
+            <img src="../img/ChatApp-3.jpg" alt="Chat‑Ansicht" class="project-screenshot">
+            <video class="project-video" controls preload="metadata">
+              <source src="../videos/ChatApp-demo.mp4" type="video/mp4" />
+              Sorry, dein Browser unterstützt keine eingebetteten Videos.
+            </video>
+          </div>
+
+          <h3><strong>Überblick:</strong> Eine plattformübergreifende Mobile‑Chat‑App mit React Native und Expo. Nutzer wählen einen Anzeigenamen und eine Hintergrundfarbe, senden Nachrichten, teilen Bilder (Kamera/Galerie) und den aktuellen Standort über eine kleine Karten‑Vorschau. Nachrichten werden in Echtzeit mit Firebase Firestore synchronisiert und lokal mit AsyncStorage gecached, damit letzte Chats offline verfügbar bleiben. Die UI folgt grundlegenden Accessibility‑Best‑Practices und passt sich an unterschiedliche Bildschirmgrößen an.</h3>
+          <p><strong>Tech‑Stack:</strong> React Native, Expo, Firebase (Firestore, Auth, Storage), Gifted Chat, Async Storage, NetInfo, React Navigation, Expo Camera/Image Picker/File System/Sharing/Location, react‑native‑maps.</p>
+
+          <p>
+            <a href="https://github.com/claudias-hub/MyRNApp" target="_blank" rel="noopener" class="button-link button-secondary">Code ansehen</a>
+          </p>
+        </div>
+
+        <div class="grid-item">
+          <h2>Portfolio Website</h2>
+          <img src="../img/Portfolio-1.jpg"
+               alt="Portfolio Startbildschirm"
+               class="project-cover">
+          <div class="project-screens" hidden>
+            <img src="../img/Portfolio-1.jpg" alt="Startseite" class="project-screenshot">
+            <img src="../img/Portfolio-2.jpg" alt="Über‑mich‑Seite" class="project-screenshot">
+            <img src="../img/Portfolio-3.jpg" alt="Projekte‑Seite" class="project-screenshot">
+            <img src="../img/Portfolio-4.jpg" alt="Kontakt‑Seite" class="project-screenshot">
+          </div>
+
+          <h3><strong>Überblick:</strong> Eine responsive, mehrseitige Portfolio‑Website mit Dark‑UI‑Theme, semantischer HTML‑Struktur und grundlegenden Accessibility‑Checks. Sie zeigt Projekte, Skills und Kontaktinfos und dient als zentraler Hub.</h3>
+          <p><strong>Tech‑Stack:</strong> HTML5, CSS (Grid/Flex), Vanilla JavaScript, Git, a11y‑Checks, GitHub Pages Deployment.</p>
+
+          <p>
+            <a href="https://github.com/claudias-hub/_myportfolio" target="_blank" rel="noopener" class="button-link button-secondary">Code ansehen</a>
+            <a href="https://claudias-hub.github.io/_myportfolio/" target="_blank" rel="noopener" class="button-link">Live‑Vorschau</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Finde mich auf:</p>
+    <div class="social-media">
+      <a href="https://github.com/claudias-hub" target="_blank" rel="noopener" aria-label="GitHub-Profil">
+        <img src="https://icongr.am/octicons/mark-github.svg?size=128&color=currentColor" alt="GitHub" height="30" width="30">
+      </a>
+      <a href="https://www.linkedin.com/in/claudia-araos/" target="_blank" rel="noopener" aria-label="LinkedIn-Profil">
+        <img src="https://icongr.am/entypo/linkedin-with-circle.svg?size=128&color=currentColor" alt="LinkedIn" height="30" width="30">
+      </a>
+    </div>
+    <p>Claudia Araos<br>
+       Berlin, Deutschland<br>
+       claudia.workhub@gmail.com</p>
+  </footer>
+
+  <!-- Modal used for images and video -->
+  <div id="imgModal" class="img-modal">
+    <button class="close-modal" aria-label="Ansicht schließen">&times;</button>
+    <button id="prevBtn" class="nav-modal nav-prev" aria-label="Zurück">&#10094;</button>
+    <div id="modalContent"></div>
+    <button id="nextBtn" class="nav-modal nav-next" aria-label="Weiter">&#10095;</button>
+  </div>
+
+  <script src="js/nav.js" defer></script>
+  <script src="js/modal-gallery.js" defer></script>
+  
+</body>
+</html>
