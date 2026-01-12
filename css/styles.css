@@ -193,7 +193,7 @@ main {
   font-family: "Dosis", Arial, sans-serif;
   font-size: 1rem;
   box-shadow: 0 10px 25px rgba(15,23,42,0.7);
-  border: 1px solid rgba(148,163,184,0.6);
+  /* border: 1px solid rgba(148,163,184,0.6); */
 }
 
 /* Nav */
@@ -241,8 +241,8 @@ main {
   color: var(--text-primary);
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 999px;
-  font-weight: 600;
+  border-radius: 700px;
+  font-weight: 400;
   font-size: 1rem;
   background: transparent;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
@@ -250,8 +250,8 @@ main {
 
 .navigation-list a:hover,
 .navigation-list a:focus {
-  background: rgba(148,163,184,0.28);
-  transform: translateY(-1px);
+  background: rgba(184, 165, 148, 0.28);
+  transform: translateY(1px);
 }
 
 /* Mobile nav toggle */
@@ -261,7 +261,7 @@ main {
   border: 1px solid var(--border-color);
   color: var(--text-primary);
   padding: 0.5rem 1rem;
-  border-radius: 999px;
+  border-radius: 700px;
   gap: 0.5rem;
   align-items: center;
   cursor: pointer;

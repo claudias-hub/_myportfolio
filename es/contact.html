@@ -8,7 +8,8 @@
 </head>
 <body>
   <header class="page-header">      
-    <div class="brand-mark"><span class="brand-pill">CAAC</span></div>   
+    <div class="brand-mark"><span class="brand-pill">CAAC</span></div> 
+      
     <div class="lang-switcher">
       <a href="../contact.html">EN</a>
       <span class="lang-divider">|</span>
@@ -19,10 +20,11 @@
     <button class="nav-toggle">Menú</button>
     <nav id="main-nav" class="main-navigation" hidden>
       <ul class="navigation-list">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Sobre mí</a></li>
-        <li><a href="work.html">Proyectos</a></li>
-        <li><a href="contact.html">Contacto</a></li>
+        <li role="menuitem"><a href="index.html" class="navigation-list__item">Inicio</a></li>
+        <li role="menuitem"><a href="about.html" class="navigation-list__item">Sobre mí</a></li>
+        <li role="menuitem"><a href="work.html" class="navigation-list__item">Proyectos</a></li>
+        <li role="menuitem"><a href="meet-app-case-study.html" class="navigation-list__item">MeetApp - Estudio de caso</a></li>
+        <li role="menuitem"><a href="contact.html" class="navigation-list__item">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -64,7 +66,7 @@
        claudia.workhub@gmail.com</p>
   </footer>
 
-  <script src="js/nav.js" defer></script>
+  <script src="../js/nav.js" defer></script>
     
   <script>
     const form = document.getElementById('contact-form');
