@@ -1,3 +1,4 @@
+
 (function () {
   const header = document.querySelector('.page-header');
   const toggle = document.querySelector('.nav-toggle');
@@ -30,5 +31,16 @@
 
   nav.addEventListener('click', e => {
     if (e.target.tagName === 'A') closeMenu();
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', e => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    const clickedInsideNav = nav.contains(e.target);
+    const clickedToggle = toggle.contains(e.target);
+    
+    if (isOpen && !clickedInsideNav && !clickedToggle) {
+      closeMenu();
+    }
   });
 })();

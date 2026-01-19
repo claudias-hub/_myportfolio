@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>End to End Design · Proyectos</title>
+  <title>Claudia’s Web Hub · Proyectos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,10 +13,7 @@
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
   <header class="page-header">      
-    <div class="brand-mark">
-      <span class="brand-pill">CAAC</span>
-    </div>   
-
+  
     <!-- Translation toggle: Outside the nav -->
     <div class="lang-switcher">
       <a href="../work.html">EN</a>
@@ -47,8 +44,10 @@
       <p>
         Cada tarjeta a continuación incluye un breve resumen, el stack tecnológico, capturas de pantalla (haz clic en la imagen para abrir la galería) y enlaces al código y vista previa en vivo.
       </p>
-      <div class="grid-container">
-        <!-- MyFlix -->
+
+      <div class="grid-container"> 
+
+        <!-- MyFlix App-->
         <div class="grid-item">
           <h2>MyFlix App</h2> 
           <img src="../img/myFlixApp-1.jpg" alt="Pantalla de inicio MyFlix" class="project-cover">
@@ -58,6 +57,11 @@
             <img src="../img/myFlixApp-3.jpg" alt="Modal de login" class="project-screenshot">
             <img src="../img/myFlixApp-4.jpg" alt="Pantalla de perfil" class="project-screenshot">
             <img src="../img/myFlixApp-5.jpg" alt="Pantalla de películas" class="project-screenshot">
+            <img src="../img/myFlixApp-6.jpg" alt="Movies screen" class="project-screenshot">
+            <img src="../img/myFlixApp-7.jpg" alt="Movies screen" class="project-screenshot">
+            <img src="../img/myFlixApp-8.jpg" alt="Movies screen" class="project-screenshot">
+            <img src="../img/myFlixApp-9.jpg" alt="Movies screen" class="project-screenshot">
+            <img src="../img/myFlixApp-10.jpg" alt="Movies screen" class="project-screenshot">
           </div>
           <h3><strong>Resumen:</strong> Una aplicación de películas full-stack construida paso a paso: primero creando una API REST segura con Node/Express, y luego desarrollando dos front-ends (uno en React y otro en Angular) que consumen el mismo backend.</h3>
           <p><strong>Stack Backend:</strong> Node.js, Express, MongoDB Atlas, JWT, Passport, bcrypt, Render.</p>
@@ -69,57 +73,6 @@
           <p>
             <a href="https://github.com/claudias-hub/myFlix-Angular-client" target="_blank" rel="noopener" class="button-link button-secondary">Código (Angular)</a>
             <a href="https://claudias-hub.github.io/myFlix-Angular-client/" target="_blank" rel="noopener" class="button-link">Vista Previa</a>
-          </p>
-        </div>
-
-        <!-- What Do I Cook -->
-        <div class="grid-item">
-          <h2>What Do I Cook?</h2>
-          <img src="../img/WhatDoICook-1.jpg" alt="App What Do I Cook?" class="project-cover">
-          <div class="project-screens" hidden>
-            <img src="../img/WhatDoICook-1.jpg" alt="Búsqueda de recetas" class="project-screenshot">
-            <img src="../img/WhatDoICook-2.jpg" alt="Detalles de receta" class="project-screenshot">
-            <img src="../img/WhatDoICook-3.jpg" alt="Favoritos" class="project-screenshot">
-          </div>
-          <h3><strong>Resumen:</strong> Un asistente de cocina full-stack que permite a los usuarios encontrar recetas basadas en los ingredientes que ya tienen. Utiliza una API personalizada que conecta con Spoonacular.</h3>
-          <p><strong>Stack:</strong> Node.js, Express, JavaScript vanilla, Fetch API, LocalStorage, Bootstrap 5.</p>
-          <p>
-            <a href="https://github.com/claudias-hub/what-do-i-cook" target="_blank" rel="noopener" class="button-link button-secondary">Ver Código</a>
-            <a href="https://claudias-hub.github.io/what-do-i-cook/" target="_blank" rel="noopener" class="button-link">Vista Previa</a>
-          </p>
-        </div>
-
-        <!-- Meet App -->
-        <div class="grid-item">
-          <h2>Meet App</h2>
-          <img src="../img/MeetApp-1.jpg" alt="Pantalla MeetApp" class="project-cover">
-          <div class="project-screens" hidden>
-            <img src="../img/MeetApp-1.jpg" alt="Inicio MeetApp" class="project-screenshot">
-            <img src="../img/MeetApp-2.jpg" alt="Descripción de eventos" class="project-screenshot">
-            <img src="../img/MeetApp-3.jpg" alt="Filtros" class="project-screenshot">
-          </div>
-          <h3><strong>Resumen:</strong> Una aplicación web progresiva (PWA) serverless construida con React que se conecta a la API de Google Calendar. Incluye visualización de datos y soporte offline.</h3>
-          <p><strong>Stack:</strong> React, AWS Lambda, Google Calendar API, Recharts, TDD (Jest/Cucumber).</p>
-          <p>
-            <a href="https://github.com/claudias-hub/meet-app" target="_blank" rel="noopener" class="button-link button-secondary">Ver Código</a>
-            <a href="https://claudias-hub.github.io/meet-app/" target="_blank" rel="noopener" class="button-link">Vista Previa</a>
-            <a href="meet-app-case-study.html" class="button-link button-secondary">Caso de Estudio</a>
-          </p>
-        </div>
-
-        <!-- Pokedex -->
-        <div class="grid-item">
-          <h2>Pokedex App</h2>
-          <img src="../img/Pokedex-1.jpg" alt="Pokedex App" class="project-cover">
-          <div class="project-screens" hidden>
-            <img src="../img/Pokedex-1.jpg" alt="Lista Pokedex" class="project-screenshot">
-            <img src="../img/Pokedex-2.jpg" alt="Detalles Pokemon" class="project-screenshot">
-          </div>
-          <h3><strong>Resumen:</strong> Aplicación web que consume la PokeAPI para mostrar una lista interactiva de Pokémon. Mi primer proyecto en JavaScript enfocado en manipulación del DOM.</h3>
-          <p><strong>Stack:</strong> HTML5, CSS3, JavaScript Vanilla, PokeAPI, Bootstrap 4.</p>
-          <p>
-            <a href="https://github.com/claudias-hub/Pokedex-js-app" target="_blank" rel="noopener" class="button-link button-secondary">Ver Código</a>
-            <a href="https://claudias-hub.github.io/Pokedex-js-app/" target="_blank" rel="noopener" class="button-link">Vista Previa</a>
           </p>
         </div>
 
@@ -166,8 +119,64 @@
           </p>
         </div>
 
+        <!-- Meet App -->
         <div class="grid-item">
-          <h2>Sitio web de portafolio</h2>
+          <h2>Meet App</h2>
+          <img src="../img/MeetApp-1.jpg" alt="Pantalla MeetApp" class="project-cover">
+          <div class="project-screens" hidden>
+            <img src="../img/MeetApp-1.jpg" alt="Inicio MeetApp" class="project-screenshot">
+            <img src="../img/MeetApp-2.jpg" alt="Descripción de eventos" class="project-screenshot">
+            <img src="../img/MeetApp-3.jpg" alt="Filtros" class="project-screenshot">
+            <img src="../img/MeetApp-4.jpg" alt="Meet App mit Eventdetails" class="project-screenshot">
+            <img src="../img/MeetApp-5.jpg" alt="Meet App Events filtern" class="project-screenshot">
+          </div>
+          <h3><strong>Resumen:</strong> Una aplicación web progresiva (PWA) serverless construida con React que se conecta a la API de Google Calendar. Incluye visualización de datos y soporte offline.</h3>
+          <p><strong>Stack:</strong> React, AWS Lambda, Google Calendar API, Recharts, TDD (Jest/Cucumber).</p>
+          <p>
+            <a href="https://github.com/claudias-hub/meet-app" target="_blank" rel="noopener" class="button-link button-secondary">Ver Código</a>
+            <a href="https://claudias-hub.github.io/meet-app/" target="_blank" rel="noopener" class="button-link">Vista Previa</a>
+            <a href="meet-app-case-study.html" class="button-link button-secondary">Caso de Estudio</a>
+          </p>
+        </div>
+
+        <!-- What Do I Cook -->
+        <div class="grid-item">
+          <h2>What Do I Cook?</h2>
+          <img src="../img/WhatDoICook-1.jpg" alt="App What Do I Cook?" class="project-cover">
+          <div class="project-screens" hidden>
+            <img src="../img/WhatDoICook-1.jpg" alt="Búsqueda de recetas" class="project-screenshot">
+            <img src="../img/WhatDoICook-2.jpg" alt="Detalles de receta" class="project-screenshot">
+            <img src="../img/WhatDoICook-3.jpg" alt="Favoritos" class="project-screenshot">
+            <img src="../img/WhatDoICook-4.jpg" alt="Detalles de receta" class="project-screenshot">
+            <img src="../img/WhatDoICook-5.jpg" alt="Favoritos" class="project-screenshot">
+          </div>
+          <h3><strong>Resumen:</strong> Un asistente de cocina full-stack que permite a los usuarios encontrar recetas basadas en los ingredientes que ya tienen. Utiliza una API personalizada que conecta con Spoonacular.</h3>
+          <p><strong>Stack:</strong> Node.js, Express, JavaScript vanilla, Fetch API, LocalStorage, Bootstrap 5.</p>
+          <p>
+            <a href="https://github.com/claudias-hub/what-do-i-cook" target="_blank" rel="noopener" class="button-link button-secondary">Ver Código</a>
+            <a href="https://claudias-hub.github.io/what-do-i-cook/" target="_blank" rel="noopener" class="button-link">Vista Previa</a>
+          </p>
+        </div>
+
+        <!-- Pokedex -->
+        <div class="grid-item">
+          <h2>Pokedex App</h2>
+          <img src="../img/Pokedex-1.jpg" alt="Pokedex App" class="project-cover">
+          <div class="project-screens" hidden>
+            <img src="../img/Pokedex-1.jpg" alt="Lista Pokedex" class="project-screenshot">
+            <img src="../img/Pokedex-2.jpg" alt="Detalles Pokemon" class="project-screenshot">
+          </div>
+          <h3><strong>Resumen:</strong> Aplicación web que consume la PokeAPI para mostrar una lista interactiva de Pokémon. Mi primer proyecto en JavaScript enfocado en manipulación del DOM.</h3>
+          <p><strong>Stack:</strong> HTML5, CSS3, JavaScript Vanilla, PokeAPI, Bootstrap 4.</p>
+          <p>
+            <a href="https://github.com/claudias-hub/Pokedex-js-app" target="_blank" rel="noopener" class="button-link button-secondary">Ver Código</a>
+            <a href="https://claudias-hub.github.io/Pokedex-js-app/" target="_blank" rel="noopener" class="button-link">Vista Previa</a>
+          </p>
+        </div>
+
+        <!-- Portfolio Website -->
+        <div class="grid-item">
+          <h2>Simple Portafolio</h2>
           <img src="../img/Portfolio-1.jpg"
               alt="Pantalla principal del portafolio"
               class="project-cover">

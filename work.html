@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>End to End Design · Work</title>
+  <title>Claudia’s Web Hub · Work</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,10 +15,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="page-header">      
-    <div class="brand-mark">
-      <span class="brand-pill">CAAC</span>
-    </div>   
-       
+    
     <!-- Translation toggle: Outside the nav -->
     <div class="lang-switcher">
       <a href="work.html" class="active">EN</a>
@@ -50,7 +47,10 @@
         Each card below includes a short overview, tech stack, screenshots (click the image to open
         a slideshow), and links to the code and live preview where available.
       </p>
+
       <div class="grid-container">
+
+        <!-- MyFlix App-->
         <div class="grid-item">
           <h2>MyFlix App</h2>
           <img src="img/myFlixApp-1.jpg"
@@ -63,6 +63,11 @@
             <img src="img/myFlixApp-3.jpg" alt="Login modal" class="project-screenshot">
             <img src="img/myFlixApp-4.jpg" alt="Profile screen" class="project-screenshot">
             <img src="img/myFlixApp-5.jpg" alt="Movies screen" class="project-screenshot">
+            <img src="img/myFlixApp-6.jpg" alt="Movies screen" class="project-screenshot">
+            <img src="img/myFlixApp-7.jpg" alt="Movies screen" class="project-screenshot">
+            <img src="img/myFlixApp-8.jpg" alt="Movies screen" class="project-screenshot">
+            <img src="img/myFlixApp-9.jpg" alt="Movies screen" class="project-screenshot">
+            <img src="img/myFlixApp-10.jpg" alt="Movies screen" class="project-screenshot">
           </div>
           <h3><strong>Overview:</strong> A full‑stack movie application built step‑by‑step — first creating a secure RESTful Node/Express API, then developing two front‑ends (one in React and one in Angular) that consume the same backend. The Live Preview shows the Angular client connected to the deployed API.</h3>
           <p><strong>Tech stack Backend:</strong> Node.js, Express, MongoDB Atlas (Mongoose), JWT authentication, Passport, bcrypt, express‑validator, CORS, Render deployment.</p>
@@ -79,6 +84,54 @@
           </p>
         </div>
 
+        <!-- Chat App -->
+        <div class="grid-item">
+          <h2>Chat App</h2>
+          <img src="img/ChatApp-1.jpg"
+               alt="Chat App start screen"
+               class="project-cover">
+          <!-- hidden screenshots for slideshow -->
+          <div class="project-screens" hidden>
+            <img src="img/ChatApp-1.jpg" alt="Welcome screen" class="project-screenshot">
+            <img src="img/ChatApp-2.jpg" alt="Start screen" class="project-screenshot">
+            <img src="img/ChatApp-3.jpg" alt="Chat screen" class="project-screenshot">
+            <video class="project-video" controls preload="metadata">
+              <source src="videos/ChatApp-demo.mp4" type="video/mp4" />
+              Sorry, your browser doesn’t support embedded videos.
+            </video>
+          </div>
+          <h3><strong>Overview:</strong> A cross‑platform mobile chat app built with React Native and Expo. Users choose a display name and chat background color, then enter a chat room where they can send text messages, share images from the camera or image library, and share their current location via a small map preview. Messages are synchronized in real time with Firebase Firestore and cached locally with AsyncStorage so recent chats remain available offline. The UI follows basic accessibility best practices (labels, roles, hints, contrast) and adapts to different device sizes.</h3>
+          <p><strong>Tech stack:</strong> React Native, Expo, Firebase (Firestore, Auth, Storage), Gifted Chat, Async Storage, NetInfo, React Navigation, Expo Camera · Image Picker · File System · Sharing · Location, react‑native‑maps.</p>
+          <p>
+            <a href="https://github.com/claudias-hub/MyRNApp" target="_blank" rel="noopener" class="button-link button-secondary">View Code</a>
+          </p>
+        </div>
+
+        <!-- Meet App -->
+        <div class="grid-item">
+          <h2>Meet App</h2>
+          <img src="img/MeetApp-1.jpg"
+               alt="MeetApp start screen"
+               class="project-cover">
+          <!-- hidden screenshots for slideshow -->
+          <div class="project-screens" hidden>
+          <img src="img/MeetApp-1.jpg" alt="MeetApp start screen" class="project-screenshot">
+          <img src="img/MeetApp-2.jpg" alt="MeetApp with events description" class="project-screenshot">
+          <img src="img/MeetApp-3.jpg" alt="MeetApp filter events" class="project-screenshot">
+          <img src="img/MeetApp-4.jpg" alt="Meet App mit Eventdetails" class="project-screenshot">
+          <img src="img/MeetApp-5.jpg" alt="Meet App Events filtern" class="project-screenshot">
+          </div>
+          <h3><strong>Overview:</strong> A serverless progressive web app (PWA) built with React that connects to the Google Calendar API. Users can search for upcoming events by city, view event details, and visualize event data in responsive charts. The app works offline using cached data and follows test-driven development (TDD) practices.</h3>
+          <p><strong>Tech stack:</strong> React, Vite, Google Calendar API (OAuth 2.0), AWS Lambda (serverless backend), Recharts (data visualization), Jest & Jest-Cucumber (TDD/BDD), Workbox (Service Workers for offline support), vite-plugin-pwa (PWA features), Atatus (performance monitoring), Github deployment.</p>
+          <p><em> Note: Google OAuth for this app is in “Testing” mode and limited to test users, so external users might be blocked from logging in. The repo and screenshots demonstrate the full behavior.</em></p>
+          <p>
+            <a href="https://github.com/claudias-hub/meet-app" target="_blank" rel="noopener" class="button-link button-secondary">View Code</a>
+            <a href="https://claudias-hub.github.io/meet-app/" target="_blank" rel="noopener" class="button-link">Live Preview</a>
+            <a href="meet-app-case-study.html" aria-label="Case Study Page" class="button-link button-secondary">Case Study</a>
+          </p>
+        </div>
+
+        <!-- What Do I Cook -->
         <div class="grid-item">
           <h2>What Do I Cook?</h2>
           <img src="img/WhatDoICook-1.jpg"
@@ -89,6 +142,8 @@
             <img src="img/WhatDoICook-1.jpg" alt="Search form and recipe cards" class="project-screenshot">
             <img src="img/WhatDoICook-2.jpg" alt="Recipe details modal" class="project-screenshot">
             <img src="img/WhatDoICook-3.jpg" alt="Favorites section with saved recipes" class="project-screenshot">
+            <img src="img/WhatDoICook-4.jpg" alt="Recipe details modal" class="project-screenshot">
+            <img src="img/WhatDoICook-5.jpg" alt="Favorites section with saved recipes" class="project-screenshot">
           </div>
 
           <h3>
@@ -120,32 +175,10 @@
           </p>
         </div>
 
-        <div class="grid-item">
-          <h2>Meet App</h2>
-          <img src="img/MeetApp-1.jpg"
-               alt="MeetApp start screen"
-               class="project-cover">
-          <!-- hidden screenshots for slideshow -->
-          <div class="project-screens" hidden>
-          <img src="img/MeetApp-1.jpg" alt="MeetApp start screen" class="project-screenshot">
-          <img src="img/MeetApp-2.jpg" alt="MeetApp with events description" class="project-screenshot">
-          <img src="img/MeetApp-3.jpg" alt="MeetApp filter events" class="project-screenshot">
-          </div>
-          <h3><strong>Overview:</strong> A serverless progressive web app (PWA) built with React that connects to the Google Calendar API. Users can search for upcoming events by city, view event details, and visualize event data in responsive charts. The app works offline using cached data and follows test-driven development (TDD) practices.</h3>
-          <p><strong>Tech stack:</strong> React, Vite, Google Calendar API (OAuth 2.0), AWS Lambda (serverless backend), Recharts (data visualization), Jest & Jest-Cucumber (TDD/BDD), Workbox (Service Workers for offline support), vite-plugin-pwa (PWA features), Atatus (performance monitoring), Github deployment.</p>
-          <p><em> Note: Google OAuth for this app is in “Testing” mode and limited to test users, so external users might be blocked from logging in. The repo and screenshots demonstrate the full behavior.</em></p>
-          <p>
-            <a href="https://github.com/claudias-hub/meet-app" target="_blank" rel="noopener" class="button-link button-secondary">View Code</a>
-            <a href="https://claudias-hub.github.io/meet-app/" target="_blank" rel="noopener" class="button-link">Live Preview</a>
-            <a href="meet-app-case-study.html" aria-label="Case Study Page" class="button-link button-secondary">Case Study</a>
-          </p>
-        </div>
-
+        <!-- Pokedex -->
         <div class="grid-item">
           <h2>Pokedex App</h2>
-          <img src="img/Pokedex-1.jpg"
-               alt="Pokedex App start screen"
-               class="project-cover">
+          <img src="img/Pokedex-1.jpg" alt="Pokedex App start screen" class="project-cover">
           <!-- hidden screenshots for slideshow -->
           <div class="project-screens" hidden>
           <img src="img/Pokedex-1.jpg" alt="Pokedex App start screen" class="project-screenshot">
@@ -156,28 +189,6 @@
           <p>
             <a href="https://github.com/claudias-hub/Pokedex-js-app" target="_blank" rel="noopener" class="button-link button-secondary">View Code</a>
             <a href="https://claudias-hub.github.io/Pokedex-js-app/" target="_blank" rel="noopener" class="button-link">Live Preview</a>
-          </p>
-        </div>
-
-        <div class="grid-item">
-          <h2>Chat App</h2>
-          <img src="img/ChatApp-1.jpg"
-               alt="Chat App start screen"
-               class="project-cover">
-          <!-- hidden screenshots for slideshow -->
-          <div class="project-screens" hidden>
-            <img src="img/ChatApp-1.jpg" alt="Welcome screen" class="project-screenshot">
-            <img src="img/ChatApp-2.jpg" alt="Start screen" class="project-screenshot">
-            <img src="img/ChatApp-3.jpg" alt="Chat screen" class="project-screenshot">
-            <video class="project-video" controls preload="metadata">
-              <source src="videos/ChatApp-demo.mp4" type="video/mp4" />
-              Sorry, your browser doesn’t support embedded videos.
-            </video>
-          </div>
-          <h3><strong>Overview:</strong> A cross‑platform mobile chat app built with React Native and Expo. Users choose a display name and chat background color, then enter a chat room where they can send text messages, share images from the camera or image library, and share their current location via a small map preview. Messages are synchronized in real time with Firebase Firestore and cached locally with AsyncStorage so recent chats remain available offline. The UI follows basic accessibility best practices (labels, roles, hints, contrast) and adapts to different device sizes.</h3>
-          <p><strong>Tech stack:</strong> React Native, Expo, Firebase (Firestore, Auth, Storage), Gifted Chat, Async Storage, NetInfo, React Navigation, Expo Camera · Image Picker · File System · Sharing · Location, react‑native‑maps.</p>
-          <p>
-            <a href="https://github.com/claudias-hub/MyRNApp" target="_blank" rel="noopener" class="button-link button-secondary">View Code</a>
           </p>
         </div>
 
