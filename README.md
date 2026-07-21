@@ -1,97 +1,77 @@
-<!-- README.md -->
+# Claudia Araos Portfolio
 
-# _myportfolio
+A responsive single-page portfolio built to present my web development work,
+skills, resume and contact information in one place. It uses a two-column layout on
+larger screens and adapts to a single-column layout on smaller devices.
 
-Welcome to my personal portfolio website! This site showcases my journey as a web developer and highlights my projects and skills.
+## Live Website
 
-## 🌐 Live Website
-Visit my portfolio: [https://claudias-hub.github.io/_myportfolio/](https://claudias-hub.github.io/_myportfolio/)
+Visit the portfolio:
+[Claudia Araos Portfolio](https://claudias-hub.github.io/_myportfolio/)
 
-## 📋 About
-I'm Claudia Araos, a web developer currently learning and building projects to enhance my skills. This portfolio represents my growth in web development and showcases the projects I've worked on.
+## Features
 
-## 🚀 Featured Projects
+- Semantic HTML
+- Responsive desktop and mobile layout
+- Scroll-aware navigation
+- Accessible project screenshot slideshow
+- Keyboard navigation
+- Typing logo animation
+- Contact form
+- Résumé download
 
-### Meet App
-A responsive web application that integrates with Google Calendar API to display upcoming events. Users can sign in with Google, browse and filter events by city, and view event visualizations.
-- **Technologies:** React, JavaScript, Google Calendar API
-- **Live Demo:** [Meet App](https://claudias-hub.github.io/meet-app/)
-- **Repository:** [GitHub](https://github.com/claudias-hub/meet-app)
+## Technologies used
 
-### Pokedex App
-A JavaScript web application that displays a list of Pokemon using data from an external API. Users can search and filter Pokemon, view detailed information in modals, and interact with a responsive interface.
-- **Technologies:** JavaScript, HTML, CSS, Pokemon API
-- **Features:** Search functionality, modal interactions, responsive design
+- HTML5
+- CSS3
+- JavaScript
+- CSS Grid
+- Flexbox
+- Formspree
+- Git and GitHub Pages
 
-### Portfolio Website
-A responsive personal portfolio website showcasing my web development projects and skills. Built with semantic HTML5, CSS3, and JavaScript.
-- **Technologies:** HTML5, CSS3, JavaScript
-- **Features:** Clean design, responsive layout, project showcase, contact form
+### Libraries
 
-## 🛠️ Technologies & Skills
-- **Frontend:** HTML5, CSS3, JavaScript, React
-- **APIs:** Google Calendar API, RESTful APIs
-- **Tools:** Git, GitHub, VS Code
-- **Design:** Responsive Web Design, CSS Grid, Flexbox
-- **Version Control:** Git, GitHub Pages
+- Font Awesome
 
-## 📱 Features
-- **Responsive Design:** Optimized for desktop, tablet, and mobile devices
-- **Modern UI:** Clean, professional design with smooth animations
-- **Accessibility:** Built with accessibility best practices
-- **Performance:** Optimized loading times and user experience
+## Project Structure
 
-## 🎨 Design
-The portfolio features a modern dark theme with:
-- Professional color scheme using CSS custom properties
-- Smooth animations and hover effects
-- Mobile-first responsive design
-- Clean typography and layout
-
-## 📂 Project Structure
-portfolio/
-├── index.html 
-├── 
-├── 
-├── 
+```text
+_myportfolio/
+├── assets/                 # Project screenshots and images
 ├── css/
-│ ├── styles.css 
-│ └── 
-├── img/ 
-├── js/ 
-└── README.md # This file
+│   └── styles.css           # Styles and responsive rules
+├── js/
+│   └── main.js              # Logo, navigation, and slideshow behavior
+├── Araos-Claudia-Resume.pdf
+├── index.html
+└── README.md
+```
 
+## Installation / how to run locally
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Web browser
-- Text editor (VS Code recommended)
-- Git (for version control)
-
-### Installation
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/claudias-hub/_myportfolio.git
 ```
+2. Open the project folder
 
-### Navigate to the project directory:
-
+```bash
 cd _myportfolio
+```
+3. Open index.html in a browser, or use the VS Code Live Server extension
 
 
-⭐ Thank you for visiting my portfolio! ⭐
+## Future improvements
+- Add new projects as they are completed.
+- Continue improving accessibility and performance.
+- Add a custom confirmation message after contact-form submissions.
 
-📧 Contact
-LinkedIn: https://www.linkedin.com/in/claudia-araos
-GitHub: claudias-hub
+### Contact
 
-🔄 Updates
-This portfolio is continuously updated as I learn new technologies and complete new projects. Check back regularly to see my latest work!
+Created by [Claudia Araos](https://www.linkedin.com/in/claudia-araos/).
 
-📄 License
-This project is open source and available under the MIT License.
-
-
-
-If you like my work, please consider giving this repository a star and connecting with me.
+- Portfolio: [claudias-hub.github.io/_myportfolio](https://claudias-hub.github.io/_myportfolio/)
+- GitHub: [@claudias-hub](https://github.com/claudias-hub)
+- LinkedIn: [Claudia Araos](https://www.linkedin.com/in/claudia-araos/)

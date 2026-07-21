@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claudia Araos | Frontend Developer</title>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />  <!-- Font Awesome - Icon Library -->
+  </head>
+
+  <body>
+
+    <!-- NAVIGATION -->
+    <header>
+      <nav class="navbar">
+        <div class="nav-logo">
+          <a href="#hero">
+            <span class="logo-text">CA</span><span class="logo-cursor">_</span>
+          </a>
+        </div>
+            
+        <ul class="nav-links">
+          <li><a href="#about"> About</a></li>
+          <li><a href="#experience"> Experience</a></li>
+          <li><a href="#projects"> Projects</a></li>
+          <li><a href="#contact"> Contact</a></li>
+          <li><a href="Araos-Claudia-Resume.pdf" target="_blank" rel="noopener" class="btn-resume">Resume  <i class="fa-solid fa-up-right-from-square"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- HERO -->
+      <section id="hero">
+        <h1>Claudia Araos</h1>
+        <h2 class="sub-heading">Turning ideas into clean, functional web experiences.</h2>
+        <p class="intro-text">
+           I’m a frontend-focused web developer based in Berlin, specialized in building 
+           (and occasionally designing) exceptional digital experiences.
+        </p>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-grid">
+
+          <!-- LEFT: Text -->
+          <div class="about-text">
+            <p>
+                I'm a junior web developer based in Berlin, originally from Venezuela, 
+                with a focus on frontend development. I completed a full-stack bootcamp 
+                at CareerFoundry in 2025, where I built projects using React, Angular,       
+                Node.js, Express, and MongoDB.
+            </p>
+            <p>
+                Before switching to tech, I worked in finance, operations, and logistics — 
+                roles that taught me to stay organized, communicate clearly, and think 
+                about the people on the other side of a process. I bring that same 
+                user-centered mindset to the interfaces I build.
+            </p>
+            <p>
+                Outside of coding, I'm into photography — it sharpens my eye for 
+                composition and contrast, which shows up in my UI decisions.
+            </p>
+
+            <h3 class="skills-heading">Technologies I've been working with:</h3>
+            <ul class="skills-list arrow-list">
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React</li>
+                <li>Angular</li>
+                <li>Node.js & Express</li>
+                <li>MongoDB</li>
+                <li>React Native</li>
+                <li>Git & GitHub</li>
+            </ul>
+          </div>
+
+          <!-- RIGHT: Photo placeholder (you can add your photo later) -->
+          <div class="about-photo">
+            <div class="photo-wrapper">
+              <img src="assets/img-portfolio.jpg" alt="Woman in a Frame" />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- EXPERIENCE --- after gain web-development work experience, add another <article class="experience-card">...</article> -->
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience-container">
+          <article class="experience-card">
+            <div class="experience-date">
+              2025
+            </div>
+
+            <div class="experience-details">
+              <h3>
+                Full Stack Web Development Student
+                <span class="experience-company">@ CareerFoundry</span>
+              </h3>
+
+              <p>
+                Completed a full-stack web development program with a frontend focus.
+                Built and deployed projects using modern JavaScript, React, Angular,
+                Node.js, Express, MongoDB, REST APIs, and Git/GitHub.
+              </p>
+
+              <ul class="experience-list arrow-list">
+                <li>Built responsive frontend applications with HTML, CSS, JavaScript, React, and Angular.</li>
+                <li>Created REST APIs with Node.js, Express, MongoDB, Mongoose, authentication, and validation.</li>
+                <li>Developed a serverless progressive web app using React, AWS Lambda, and the Google Calendar API.</li>
+                <li>Created a cross-platform mobile chat app with React Native, Expo, and Firebase.</li>
+                <li>Practiced testing with Jest and Jest-Cucumber, including basic TDD and BDD workflows.</li>
+                <li>Used Git and GitHub to manage code, document projects, and deploy applications.</li>
+              </ul>
+
+              <ul class="experience-tags" aria-label="Technologies used">
+                <li>React</li>
+                <li>Angular</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>React Native</li>
+              </ul>
+            </div>
+          </article>
+
+          <a href="Araos-Claudia-Resume.pdf" target="_blank" rel="noopener" class="btn-primary">
+            View my full resume <i class="fa-solid fa-up-right-from-square"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <!-- SOCIAL LINKS -->
+        <ul class="social-links">
+        <li>
+          <a href="https://github.com/claudias-hub" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/claudia-araos/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:claudia.workhub@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+  </body>
+
+</html>

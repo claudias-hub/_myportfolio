@@ -101,7 +101,7 @@
               with a focus on frontend development. I completed a full-stack bootcamp
               at CareerFoundry in 2025, where I built projects using React, Angular,
               Node.js, Express, and MongoDB.</p>
-              <p>Before switching to tech, I worked in finance, operations, and logistics —
+              <p>Before switching to tech, I worked in budget administration, operations, and logistics —
               roles that taught me to stay organized, communicate clearly, and think
               about the people on the other side of a process. I bring that same
               user-centered mindset to the interfaces I build.</p>
@@ -205,13 +205,21 @@
                   <li>MongoDB</li>
                 </ul>
                 <div class="project-links">
-                  <a href="https://github.com/claudias-hub/myFlix-Angular-client" target="_blank" rel="noopener" aria-label="View MyFlix code on GitHub">
+                  <a href="https://github.com/claudias-hub/myFlix-Angular-client" target="_blank" rel="noopener" aria-label="View MyFlix Angular code on GitHub">
                     <i class="fa-brands fa-github" aria-hidden="true"></i>
-                    <span>Code</span>
+                    <span>Angular Client</span>
+                  </a>
+                  <a href="https://github.com/claudias-hub/myFlix_api" target="_blank" rel="noopener" aria-label="View MyFlix API code on GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span>REST API</span>
+                  </a>
+                  <a href="https://github.com/claudias-hub/myFlix-client" target="_blank" rel="noopener" aria-label="View MyFlix React code on GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span>React Client</span>
                   </a>
                   <a href="https://claudias-hub.github.io/myFlix-Angular-client/" target="_blank" rel="noopener" aria-label="Open MyFlix live site">
                     <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    <span>Live site</span>
+                    <span>Angular Live Demo</span>
                   </a>
                 </div>
               </div>
@@ -238,22 +246,28 @@
               </div>
               <div class="project-info">
                 <h3>Meet App</h3>
-                <p>A serverless PWA built with React that connects to the Google Calendar API.
-                Optimized for offline use and built following TDD (Test-Driven Development).</p>
+                <p>A serverless Progressive Web App built with React that displays upcoming events from the Google Calendar
+                    API. Users sign in with their Google account to
+                    access the app — this is required because the app reads real calendar data
+                    on their behalf. Events can be filtered by city and visualized in charts.
+                    It also works offline using a service worker and cached data.</p>
                 <ul class="project-tags" aria-label="Technologies used">
                   <li>React</li>
-                  <li>AWS Lambda</li>
+                  <li>JavaScript</li>
                   <li>Google Calendar API</li>
+                  <li>OAuth 2.0</li>
+                  <li>AWS Lambda</li>
                   <li>PWA</li>
+                  <li>Jest-Cucumber</li>
                 </ul>
                 <div class="project-links">
                   <a href="https://github.com/claudias-hub/meet-app" target="_blank" rel="noopener" aria-label="View Meet App code on GitHub">
                     <i class="fa-brands fa-github" aria-hidden="true"></i>
                     <span>Code</span>
                   </a>
-                  <a href="https://claudias-hub.github.io/meet-app/" target="_blank" rel="noopener" aria-label="Open Meet App live site">
+                  <a href="https://meet-app-flax.vercel.app/" target="_blank" rel="noopener" aria-label="Open Meet App live site">
                     <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    <span>Live site</span>
+                    <span>Live Demo</span>
                   </a>
                 </div>
               </div>
@@ -333,7 +347,7 @@
                   </a>
                   <a href="https://claudias-hub.github.io/what-do-i-cook/" target="_blank" rel="noopener" aria-label="Open What Do I Cook live site">
                     <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    <span>Live site</span>
+                    <span>Live Demo</span>
                   </a>
                 </div>
               </div>
@@ -373,73 +387,64 @@
                   </a>
                   <a href="https://claudias-hub.github.io/Pokedex-js-app/" target="_blank" rel="noopener" aria-label="Open Pokédex App live site">
                     <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    <span>Live site</span>
+                    <span>Live Demo</span>
                   </a>
                 </div>
               </div>
             </article>
 
             <!-- Project 6: Portfolio Website -->
-<article class="project-card">
-  <div class="project-image-wrapper">
-    <button
-      class="project-image-container"
-      type="button"
-      aria-label="View portfolio website screenshots"
-      onclick="openSlideshow([
-        'assets/Portfolio-1.jpg',
-        'assets/Portfolio-2.jpg',
-        'assets/Portfolio-3.jpg'
-      ])"
-    >
-      <img
-        src="assets/Portfolio-1.jpg"
-        alt="Portfolio website home page"
-        class="project-thumbnail"
-      />
-    </button>
-    <p class="project-image-caption">[ click to view screenshots ]</p>
-  </div>
+            <article class="project-card">
+              <div class="project-image-wrapper">
+                <button
+                class="project-image-container"
+                type="button"
+                aria-label="View portfolio website screenshots"
+                onclick="openSlideshow([
+                    'assets/Portfolio-1.jpg',
+                    'assets/Portfolio-2.jpg',
+                    'assets/Portfolio-3.jpg',
+                    'assets/Portfolio-4.jpg'
+                ])"
+                >
+                <img
+                    src="assets/Portfolio-1.jpg"
+                    alt="Portfolio website home page"
+                    class="project-thumbnail"
+                />
+                </button>
+                <p class="project-image-caption">[ click to view screenshots ]</p>
+              </div>
 
-  <div class="project-info">
-    <h3>Portfolio Website</h3>
-    <p>
-      A single-page personal portfolio designed to present my work and skills
-      in a clean, accessible way. Built from scratch with vanilla HTML, CSS,
-      and JavaScript — no frameworks. Features a sticky two-column layout,
-      a typing logo animation, smooth scroll-based active navigation, and
-      an image slideshow modal for project screenshots.
-    </p>
+              <div class="project-info">
+                <h3>Portfolio Website</h3>
+                <p>
+                A single-page personal portfolio designed to present my work and skills
+                in a clean, accessible way. Built from scratch with vanilla HTML, CSS,
+                and JavaScript — no frameworks. Features a sticky two-column layout,
+                a typing logo animation, smooth scroll-based active navigation, and
+                an image slideshow modal for project screenshots.
+                </p>
 
-    <ul class="project-tags" aria-label="Technologies used">
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-    </ul>
+                <ul class="project-tags" aria-label="Technologies used">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                </ul>
 
-    <div class="project-links">
-      <a
-        href=""
-        target="_blank"
-        rel="noopener"
-        aria-label="View portfolio source code on GitHub"
-      >
-        <i class="fa-brands fa-github" aria-hidden="true"></i>
-        <span>Code</span>
-      </a>
-
-      <a
-        href=""
-        target="_blank"
-        rel="noopener"
-        aria-label="Open portfolio live site"
-      >
-        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-        <span>Live site</span>
-      </a>
-    </div>
-  </div>
-</article>
+                <div class="project-links">
+                <a
+                  href="https://github.com/claudias-hub/_myportfolio"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="View portfolio source code on GitHub"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>Code</span>
+                </a>
+                </div>
+              </div>
+            </article>
 
           </div>
         </section>
@@ -468,7 +473,7 @@
               I'm open to junior frontend opportunities, collaborations, and conversations
               about building thoughtful web experiences. Feel free to send me a message.
             </p>
-            <form class="contact-form">
+            <form class="contact-form" action="https://formspree.io/f/mjgnwzqr" method="POST">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" autocomplete="name" required />
 
@@ -478,13 +483,14 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="5" required></textarea>
 
+              <input type="hidden" name="_replyto" value="claudia.workhub@gmail.com" />
               <button type="submit" class="btn-primary">
                 Send message <i class="fa-solid fa-paper-plane"></i>
               </button>
             </form>
             <p class="contact-alternative">
               Or email me directly at
-              <a href="mailto:claudia.workhub@gmail.com">claudia.workhub@gmail.com</a>.
+              <a href="mailto:claudia.workhub@gmail.com">claudia.workhub@gmail.com</a>
             </p>
           </div>
         </section>

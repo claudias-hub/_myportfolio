@@ -1,0 +1,519 @@
+/* CSS VARIABLES */
+:root {
+  /* Colors - Brittany Chiang inspired (Dark & Elegant) */
+  --bg-color: #0a192f;        /* Deep dark blue background */
+  --text-main: #e8d5e0;      /* Warm off-white with a pink tint */
+  --text-dim: #8892b0;       /* Muted blue-grey for subtexts */
+  --accent-color: #e91e8c;    /* Brighter pink for hover states */
+
+  /* Spacing & Sizes */
+  --section-padding: 100px;
+  --max-width: 1100px;
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* BASE STYLES - Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This ensures padding doesn't break your width calculations */
+}
+
+/* GLOBAL SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* BODY - General look */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevents accidental horizontal scrolling */
+  padding-top: 100px; /* Same hight as header */
+}
+
+/* NAVBAR CONTAINER */
+header {
+  position: fixed;       /* This makes it stay fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;         /* Standard altura for nav */
+  background: rgba(10, 25, 47, 0.85); /* Slightly transparent background */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);        /* This creates the modern "frosted glass" effect */
+  z-index: 1000;         /* Ensures it stays above all other content */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo on left, Links on right */
+  align-items: center;
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* LOGO */
+.nav-logo {
+  min-width: 56px;
+  flex-shrink: 0;
+}
+
+.nav-logo a {
+  color: var(--accent-color);
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.logo-cursor {
+  color: var(--accent-color);
+  animation: blink 0.8s step-end infinite;  /* blinks the underscore */
+  margin-left: 2px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 13px;
+  transition: color 0.3s ease;
+  position: relative;        /* needed for the ::after line to position correctly */
+  padding-bottom: 4px;       /* space between text and line */
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Growing line on hover */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;                  /* starts at 0 width — invisible */
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;  /* animates the width */
+}
+
+/* On hover — line grows to full width */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* RESUME BUTTON */
+.btn-resume {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color) !important;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.btn-resume:hover {
+  background: rgba(233, 30, 140, 0.1);
+}
+
+.btn-resume::after {
+  display: none;  /* no underline animation on the resume button */
+}
+
+/* LAYOUT - Content Container */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;         /* Centers the content */
+  padding: 0 40px;        /* Side padding for mobile/tablets */
+}
+
+section {
+  padding: var(--section-padding) 0;
+  min-height: 80vh;      /* Makes sections tall enough to feel like "pages" */
+}
+
+/* TYPOGRAPHY - Headings */
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--text-dim); /* Subtle line like Brittany's */
+  padding-bottom: 10px;
+}
+
+
+/* HERO SPECIFIC STYLES */
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers text vertically if section is tall */
+  min-height: 100vh;      /* Hero covers the full first screen */
+  padding-bottom: 40px;   /* so the icons at the bottom don't touch the next section */
+}
+
+#hero h1 {
+  font-size: clamp(40px, 7vw, 72px); /* Responsive text: scales with screen size! */
+  color: var(--text-main);
+  margin: 0 0 20px 0;  /* top right bottom left — only bottom has space */
+}
+
+#hero h2.sub-heading {
+  font-size: clamp(18px, 3vw, 32px);
+  color: var(--text-dim);
+  border: none; /* Removing the underline we added for normal h2 */
+  margin-bottom: 30px;
+}
+
+.intro-text {
+  max-width: 500px;
+  color: var(--text-dim);
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+  display: flex;        /* puts icons in a row */
+  gap: 24px;            /* space between icons */
+  list-style: none;     /* removes bullet points from the <ul> */
+  padding: 0;
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: var(--text-dim);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;  /* smooth color change on hover */
+  display: inline-block; /* enables transform to work */
+}
+
+.social-links a:hover {
+  color: var(--accent-color);  /* raspberry on hover */
+  transform: translateY(-3px); /* subtle "lift" effect on hover */
+}
+
+/* ANIMATIONS */
+/* Cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+
+
+
+/* test */
+/* =====================
+   SECTION TITLES (shared style for all sections)
+   ===================== */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(20px, 3vw, 26px);
+  color: var(--text-main);
+  white-space: nowrap;
+  margin-bottom: 50px;
+  border: none; /* overrides the global h2 border */
+}
+
+/*
+  It's a pseudo-element (fake element) that draws a horizontal line.
+  flex: 1 makes it stretch to fill remaining space.
+*/
+.section-title::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  max-width: 300px;
+  background: var(--text-dim);
+  opacity: 0.3;
+  flex: 1;
+}
+
+
+/* =====================
+   ABOUT SECTION
+   ===================== */
+
+/* CSS Grid with 2 columns: text takes 3 parts, photo takes 2 parts. */
+.about-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-text p {
+  color: var(--text-dim);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.skills-heading {
+  color: var(--text-main);
+  font-size: 0.95rem;
+  margin: 30px 0 15px;
+  font-weight: 500;
+}
+
+/* Skills list styled as a 2-column grid. */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 8px 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  align-items: center;
+  color: var(--text-dim);
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+/* Shared arrow style for lists across the portfolio */
+.arrow-list {
+  list-style: none;
+  padding: 0;
+}
+
+.arrow-list li {
+  display: flex;
+  gap: 8px;
+}
+
+.arrow-list li::before {
+  content: "▹";
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+/* =====================
+   ABOUT PHOTO
+   ===================== */
+
+.photo-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.photo-wrapper img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+  filter: grayscale(30%);
+  transition: filter 0.3s ease;
+}
+
+.photo-wrapper img:hover {
+  filter: grayscale(0%);
+}
+
+/* Frame that sits behind the photo. */
+.photo-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--accent-color);
+  border-radius: 6px;
+  z-index: -1; /* sits BEHIND the image */
+  transition: top 0.3s ease, left 0.3s ease;
+}
+
+/* On hover, the border box shifts slightly — gives a 3D feel */
+.photo-wrapper:hover::after {
+  top: 8px;
+  left: 8px;
+}
+
+/* =====================
+   EXPERIENCE SECTION
+   ===================== */
+
+.experience-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Grid - dates in narrow left column and the experience information in wider right column. */
+.experience-card {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 30px;
+  padding: 28px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* A gentle hover background separates the experience card without adding a heavy visible border. */
+.experience-card:hover {
+  background-color: rgba(136, 146, 176, 0.08);
+  transform: translateY(-3px);
+}
+
+.experience-date {
+  color: var(--text-dim);
+  font-family: monospace;
+  font-size: 0.85rem;
+  padding-top: 4px;
+}
+
+.experience-details h3 {
+  color: var(--text-main);
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+
+.experience-company {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.experience-details p {
+  color: var(--text-dim);
+  margin-bottom: 18px;
+}
+
+.experience-list {
+  list-style: none;
+  margin-bottom: 22px;
+}
+
+.experience-list li {
+  color: var(--text-dim);
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+/*
+  Tags identify the main technologies without forcing someone
+  to read the full paragraph or bullet list.
+*/
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.experience-tags li {
+  color: var(--accent-color);
+  background-color: rgba(233, 30, 140, 0.1);
+  border-radius: 999px;
+  font-family: monospace;
+  font-size: 0.78rem;
+  padding: 5px 10px;
+}
+
+/* The resume link at the end of the Experience section. */
+.experience-container .btn-primary {
+  margin: 50px auto 0;
+  display: table;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  color: var(--accent-color) !important;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 14px;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgba(233, 30, 140, 0.05);
+}
+
+.btn-primary i {
+  transition: transform 0.25s ease;
+}
+
+.btn-primary:hover i {
+  transform: translate(3px, -3px);
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+   ===================== */
+
+/*
+  On small screens, stack the grid vertically instead of side by side.
+  The photo moves below the text and centers itself.
+*/
+@media (max-width: 700px) {
+  .about-grid {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .about-photo {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*
+  On phones, the date and content stack vertically.
+  This avoids squeezing the content into a narrow column.
+*/
+@media (max-width: 700px) {
+  .experience-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .experience-date {
+    padding-top: 0;
+  }
+}
+
+/* Navbar small screens */
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .btn-resume {
+    padding: 5px 8px;
+  }
+}
