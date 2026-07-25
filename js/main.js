@@ -102,14 +102,38 @@ document.querySelector('.close-modal').onclick = () => {
 };
 
 document.querySelector('.modal-next').onclick = () => {
-  slideshowIndex = (slideshowIndex + 1) % currentImages.length;
-  updateModalImage();
+  if (slideshowIndex === currentImages.length - 1) {
+    document.querySelector('.close-modal').click();   // Last image reached— close the modal
+  } else {                                            // Not the last image yet — go forward
+    slideshowIndex++;
+    updateModalImage();
+  }
 };
 
 document.querySelector('.modal-prev').onclick = () => {
   slideshowIndex = (slideshowIndex - 1 + currentImages.length) % currentImages.length;
   updateModalImage();
 };
+
+// Keyboard navigation for slideshow modal
+document.addEventListener('keydown', function (e) {
+  const modal = document.getElementById('slideshow-modal');
+  const isOpen = modal.style.display === 'flex';
+
+  if (!isOpen) return; // only active when modal is open
+
+  if (e.key === 'ArrowRight') {
+    document.querySelector('.modal-next').click();
+  }
+
+  if (e.key === 'ArrowLeft') {
+    document.querySelector('.modal-prev').click();
+  }
+
+  if (e.key === 'Escape') {
+    document.querySelector('.close-modal').click();
+  }
+});
 
 // Close when clicking outside the image
 window.onclick = (event) => {

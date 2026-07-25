@@ -203,6 +203,32 @@ nav {
   padding-top: 0;
 }
 
+.lang-switcher {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin-top: 28px;
+}
+
+.lang-switcher a {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.lang-switcher a:hover {
+  color: var(--accent-color);
+  /* transform: translateY(-3px); */
+}
+
+.lang-switcher a.active {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
 .social-links {
   display: flex;
   gap: 20px;
@@ -823,6 +849,10 @@ section {
   .left-col-inner {
     min-height: unset;
     padding: clamp(40px, 7vh, 72px) 0 28px;
+  }
+
+  .lang-switcher {
+    justify-content: center;
   }
 
   .hero-text {
